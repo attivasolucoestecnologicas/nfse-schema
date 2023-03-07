@@ -24,4 +24,12 @@ class Helpers
         }
         return $clone;
     }
+
+    public static function strNumber($string = null)
+    {
+        if ($string) {
+            return preg_replace("/[^0-9]/", "", $string);
+        }
+        return null;
+    }
 }
