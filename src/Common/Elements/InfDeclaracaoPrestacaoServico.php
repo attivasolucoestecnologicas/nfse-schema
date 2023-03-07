@@ -17,9 +17,9 @@ class InfDeclaracaoPrestacaoServico
     {
         $node = $dom->createElement('InfDeclaracaoPrestacaoServico');
 
-        $dom->addChild($node, "Rps", $std->rps, false);
+        InfRps::mount($std->rps, $dom, $node);
         $dom->addChild($node, "Competencia", $std->competencia, true);
-        $dom->addChild($node, "Servico", $std->servico, true);
+        $dom->addChild($node, "Servico", $std->servico, true); //
         $dom->addChild($node, "Prestador", $std->prestador, true);
         $dom->addChild($node, "TomadorServico", $std->tomadorservico, false);
         $dom->addChild($node, "Intermediario", $std->intermediario, false);
