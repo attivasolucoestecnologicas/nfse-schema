@@ -7,7 +7,7 @@ use DOMNode;
 use NFePHP\Common\DOMImproved;
 use stdClass;
 
-class Rps
+class InfRps
 {
     /**
      * @param stdClass $std
@@ -18,7 +18,11 @@ class Rps
     {
         $node = $dom->createElement('Rps');
 
-        InfDeclaracaoPrestacaoServico::mount($std, $dom, $node);
+        IdentificacaoRps::mount($std->identificacaorps, $dom, $node);
+        $dom->addChild($node, "DataEmissao", $std->dataemissao, true);
+        $dom->addChild($node, "Status", $std->status, true);
+        RpsSubstituido::mount($std->rpssubstituido, $dom, $node);
+        $dom->addChild($node, "Id", $std->id, false);
 
         $parent->appendChild($node);
         $dom->appendChild($parent);

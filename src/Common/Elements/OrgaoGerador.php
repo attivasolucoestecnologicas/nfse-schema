@@ -3,22 +3,24 @@
 
 namespace Ativasolucoestecnologicas\Nfse\Common\Elements;
 
+
 use DOMNode;
 use NFePHP\Common\DOMImproved;
 use stdClass;
 
-class Rps
+class OrgaoGerador
 {
     /**
      * @param stdClass $std
      * @param DOMImproved $dom
-     * @param DOMNode $parent
+     * @param DomNode $parent
      */
     public static function mount($std, $dom, $parent)
     {
-        $node = $dom->createElement('Rps');
+        $node = $dom->createElement('OrgaoGerador');
 
-        InfDeclaracaoPrestacaoServico::mount($std, $dom, $node);
+        $dom->addChild($node, "CodigoMunicipio", $std->codigomunicipio, true);
+        $dom->addChild($node, "Uf", $std->uf, true);
 
         $parent->appendChild($node);
         $dom->appendChild($parent);

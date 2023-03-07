@@ -2,6 +2,7 @@
 
 namespace Ativasolucoestecnologicas\Nfse\Factories;
 
+use Ativasolucoestecnologicas\Nfse\Common\Elements\CpfCnpj;
 use Ativasolucoestecnologicas\Nfse\Common\Elements\ListaRps;
 use DOMNode;
 use NFePHP\Common\DOMImproved as Dom;
@@ -55,12 +56,9 @@ class Rps
             $this->std->identificacaorps->numerolote,
             true
         );
-        $this->dom->addChild(
-            $infRps,
-            "CpfCnpj",
-            $this->std->identificacaorps->cpfcnpj,
-            true
-        );
+
+        CpfCnpj::mount($this->std->identificacaorps->cpfcnpj, $this->dom, $infRps);
+
         $this->dom->addChild(
             $infRps,
             "InscricaoMunicipal",

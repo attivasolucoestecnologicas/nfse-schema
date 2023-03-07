@@ -6,11 +6,11 @@ use Ativasolucoestecnologicas\Nfse\Common\Factory;
 use Ativasolucoestecnologicas\Nfse\Helpers\Helpers;
 use stdClass;
 
-class Rps
+class Nfse
 {
     public static function render(stdClass $std = null)
     {
-        return Factory::render(self::init($std), Factory::RPS)->toXml();
+        return Factory::render(self::init($std), Factory::NFSE)->toXml();
     }
 
     private static function init(stdClass $std = null)

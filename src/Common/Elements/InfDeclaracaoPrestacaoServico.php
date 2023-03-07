@@ -17,13 +17,13 @@ class InfDeclaracaoPrestacaoServico
     {
         $node = $dom->createElement('InfDeclaracaoPrestacaoServico');
 
-        $dom->addChild($node, "Rps", $std->rps, false);
+        InfRps::mount($std->rps, $dom, $node);
         $dom->addChild($node, "Competencia", $std->competencia, true);
-        $dom->addChild($node, "Servico", $std->servico, true);
-        $dom->addChild($node, "Prestador", $std->prestador, true);
-        $dom->addChild($node, "TomadorServico", $std->tomadorservico, false);
-        $dom->addChild($node, "Intermediario", $std->intermediario, false);
-        $dom->addChild($node, "ConstrucaoCivil", $std->construcaocivil, false);
+        Servico::mount($std->servico, $dom, $node);
+        IdentificacaoPrestador::mount($std->prestador, $dom, $node, 'Prestador');
+        TomadorServico::mount($std->tomadorservico, $dom, $node);
+        Intermediario::mount($std->intermediario, $dom, $node);
+        ConstrucaoCivil::mount($std->construcaocivil, $dom, $node);
         $dom->addChild($node, "RegimeEspecialTributacao", $std->regimeespecialtributacao, false);
         $dom->addChild($node, "OptanteSimplesNacional", $std->optantesimplesnacional, true);
         $dom->addChild($node, "IncentivoFiscal", $std->incentivofiscal, true);

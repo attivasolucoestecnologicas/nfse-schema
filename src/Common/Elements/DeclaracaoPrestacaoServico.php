@@ -6,20 +6,18 @@ use DOMNode;
 use NFePHP\Common\DOMImproved;
 use stdClass;
 
-class ListaRps
+class DeclaracaoPrestacaoServico
 {
     /**
      * @param stdClass $std
      * @param DOMImproved $dom
-     * @param DOMNode $parent
+     * @param DomNode $parent
      */
-    public static function mount($std, $dom, &$parent)
+    public static function mount($std, $dom, $parent)
     {
-        $node = $dom->createElement('ListaRps');
+        $node = $dom->createElement('DeclaracaoPrestacaoServico');
 
-        foreach ($std->rps as $rps) {
-            Rps::mount($rps, $dom, $node);
-        }
+        InfDeclaracaoPrestacaoServico::mount($std, $dom, $node);
 
         $parent->appendChild($node);
         $dom->appendChild($parent);

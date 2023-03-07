@@ -1,25 +1,26 @@
 <?php
 
+
 namespace Ativasolucoestecnologicas\Nfse\Common\Elements;
+
 
 use DOMNode;
 use NFePHP\Common\DOMImproved;
 use stdClass;
 
-class ListaRps
+class Contato
 {
     /**
      * @param stdClass $std
      * @param DOMImproved $dom
-     * @param DOMNode $parent
+     * @param DomNode $parent
      */
-    public static function mount($std, $dom, &$parent)
+    public static function mount($std, $dom, $parent)
     {
-        $node = $dom->createElement('ListaRps');
+        $node = $dom->createElement('Contato');
 
-        foreach ($std->rps as $rps) {
-            Rps::mount($rps, $dom, $node);
-        }
+        $dom->addChild($node, "Telefone", $std->telefone, false);
+        $dom->addChild($node, "Email", $std->email, false);
 
         $parent->appendChild($node);
         $dom->appendChild($parent);
