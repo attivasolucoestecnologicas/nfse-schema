@@ -15,9 +15,9 @@ class IdentificacaoPrestador
      * @param DOMImproved $dom
      * @param DomNode $parent
      */
-    public static function mount($std, $dom, $parent)
+    public static function mount($std, $dom, $parent, $element = "IdentificacaoPrestador")
     {
-        $node = $dom->createElement('IdentificacaoPrestador');
+        $node = $dom->createElement($element);
 
         CpfCnpj::mount($std->cpfcnpj, $dom, $node);
         $dom->addChild($node, "InscricaoMunicipal", $std->inscricaomunicipal, false);
