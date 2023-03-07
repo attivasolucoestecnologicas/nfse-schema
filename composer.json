@@ -1,0 +1,18 @@
+{
+    "name": "ativasolucoestecnologicas/nfse",
+    "autoload": {
+        "psr-4": {
+            "Ativasolucoestecnologicas\\Nfse\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Walber Jefferson",
+            "email": "walberjefferson@hotmail.com"
+        }
+    ],
+    "require": {
+        "nfephp-org/sped-common": "^5.1",
+      "ext-dom": "*"
+    }
+}
