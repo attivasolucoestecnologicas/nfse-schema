@@ -38,7 +38,7 @@ abstract class Base
 
     public function save($path = '/tmp')
     {
-        $filePath = Helpers::save($this);
+        $filePath = Helpers::save($this, $path);
         $result = $this->dom->save($filePath);
         if ($result !== false) {
             return true;
