@@ -2,26 +2,16 @@
 
 namespace Ativasolucoestecnologicas\Nfse\Factories;
 
+use Ativasolucoestecnologicas\Nfse\Common\Base;
 use Ativasolucoestecnologicas\Nfse\Common\Elements\DeclaracaoPrestacaoServico;
 use Ativasolucoestecnologicas\Nfse\Common\Elements\OrgaoGerador;
 use Ativasolucoestecnologicas\Nfse\Common\Elements\PrestadorServico;
 use Ativasolucoestecnologicas\Nfse\Common\Elements\ValoresNfse;
 use DOMNode;
-use NFePHP\Common\DOMImproved as Dom;
 use stdClass;
 
-class Nfse
+class Nfse extends Base
 {
-    /**
-     * @var stdClass
-     */
-    protected $std;
-
-    /**
-     * @var Dom
-     */
-    protected $dom;
-
     /**
      * @var DOMNode
      */
@@ -29,15 +19,10 @@ class Nfse
 
     public function __construct(stdClass $std)
     {
-        $this->std = $std;
-
-        $this->dom = new Dom('1.0', 'UTF-8');
-        $this->dom->preserveWhiteSpace = false;
-        $this->dom->formatOutput = false;
+        parent::__construct($std);
         $this->nfse = $this->dom->createElement('Nfse');
         $this->mount();
     }
-
 
     private function mount()
     {
@@ -101,15 +86,5 @@ class Nfse
         $this->dom->addChild($this->nfse, 'versao', $this->std->versao, true);
 
         $this->dom->appendChild($this->nfse);
-    }
-
-    public function toString()
-    {
-        return str_replace('<?xml version="1.0" encoding="UTF-8"?>', '', $this->dom->saveXML());
-    }
-
-    public function toXml()
-    {
-        return $this->dom->saveXML();
     }
 }

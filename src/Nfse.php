@@ -13,6 +13,11 @@ class Nfse
         return Factory::render(self::init($std), Factory::NFSE)->toXml();
     }
 
+    public static function save(stdClass $std = null, $path = '/')
+    {
+        return Factory::render(self::init($std), Factory::NFSE)->save($path);
+    }
+
     private static function init(stdClass $std = null)
     {
         if (!empty($std)) {

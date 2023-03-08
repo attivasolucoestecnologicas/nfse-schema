@@ -2,32 +2,14 @@
 
 namespace Ativasolucoestecnologicas\Nfse\Factories;
 
+use Ativasolucoestecnologicas\Nfse\Common\Base;
 use Ativasolucoestecnologicas\Nfse\Common\Elements\CpfCnpj;
 use Ativasolucoestecnologicas\Nfse\Common\Elements\ListaRps;
 use DOMNode;
-use NFePHP\Common\DOMImproved as Dom;
 use stdClass;
 
-class Rps
+class Rps extends Base
 {
-    /**
-     * @var stdClass
-     */
-    protected $std;
-    /**
-     * @var string
-     */
-    protected $ver;
-    /**
-     * @var string
-     */
-    protected $jsonschema;
-
-    /**
-     * @var Dom
-     */
-    protected $dom;
-
     /**
      * @var DOMNode
      */
@@ -35,13 +17,8 @@ class Rps
 
     public function __construct(stdClass $std)
     {
-        $this->std = $std;
-
-        $this->dom = new Dom('1.0', 'UTF-8');
-        $this->dom->preserveWhiteSpace = false;
-        $this->dom->formatOutput = false;
+        parent::__construct($std);
         $this->rps = $this->dom->createElement('EnviarLoteRpsEnvio');
-
         $this->mount();
     }
 
@@ -90,17 +67,5 @@ class Rps
 
         $this->rps->appendChild($infRps);
         $this->dom->appendChild($this->rps);
-    }
-
-    public function toString()
-    {
-//        $this->mount();
-        return str_replace('<?xml version="1.0" encoding="UTF-8"?>', '', $this->dom->saveXML());
-    }
-
-    public function toXml()
-    {
-//        $this->mount();
-        return $this->dom->saveXML();
     }
 }
