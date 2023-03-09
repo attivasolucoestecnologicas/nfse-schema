@@ -13,6 +13,11 @@ class Rps
         return Factory::render(self::init($std), Factory::RPS)->toXml();
     }
 
+    public static function save(stdClass $std = null, $path = '/')
+    {
+        return Factory::render(self::init($std), Factory::RPS)->save($path);
+    }
+
     private static function init(stdClass $std = null)
     {
         if (!empty($std)) {
