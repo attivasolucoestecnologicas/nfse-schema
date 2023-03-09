@@ -7,18 +7,18 @@ ini_set('display_errors', 'On');
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $std = new stdClass;
+$std->EnviarLoteRpsEnvio = new stdClass();
+$std->EnviarLoteRpsEnvio->Loterps = new stdClass();
+$std->EnviarLoteRpsEnvio->Loterps->NumeroLote = '123456';
+$std->EnviarLoteRpsEnvio->Loterps->CpfCnpj = '12345678901234';
+$std->EnviarLoteRpsEnvio->Loterps->InscricaoMunicipal = '123456789';
+$std->EnviarLoteRpsEnvio->Loterps->QuantidadeRps = 2;
+$std->EnviarLoteRpsEnvio->Loterps->Id = 'Lote';
+$std->EnviarLoteRpsEnvio->Loterps->versao = '2.03';
 
-$std->IdentificacaoRps = new \stdClass();
-$std->IdentificacaoRps->NumeroLote = '123456';
-$std->IdentificacaoRps->CpfCnpj = '12345678901234';
-$std->IdentificacaoRps->InscricaoMunicipal = '123456789';
-$std->IdentificacaoRps->QuantidadeRps = 2;
-$std->IdentificacaoRps->Id = 'Lote';
-$std->IdentificacaoRps->versao = '2.03';
+$std->EnviarLoteRpsEnvio->Loterps->ListaRps = new \stdClass();
 
-$std->ListaRps = new \stdClass();
-
-$std->ListaRps->Rps = (object)[];
+$std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps = (object)[];
 $infDeclaracaoPrestacaoServico = new stdClass();
 $infDeclaracaoPrestacaoServico->Rps = new stdClass();
 $infDeclaracaoPrestacaoServico->Rps->DataEmissao = '2023-03-08';
@@ -97,10 +97,10 @@ $infDeclaracaoPrestacaoServico->OptanteSimplesNacional = 1; // 1 - SIM | 2 - NÃ
 $infDeclaracaoPrestacaoServico->IncentivoFiscal = 2;  // 1 - SIM | 2 - NÃO - OK
 $infDeclaracaoPrestacaoServico->Id = '001'; // OK
 
-$std->ListaRps->Rps->{1} = $infDeclaracaoPrestacaoServico;
-$std->ListaRps->Rps->{2} = $infDeclaracaoPrestacaoServico;
-$std->ListaRps->Rps->{3} = $infDeclaracaoPrestacaoServico;
-$std->ListaRps->Rps->{4} = $infDeclaracaoPrestacaoServico;
+$std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{1} = $infDeclaracaoPrestacaoServico;
+$std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{2} = $infDeclaracaoPrestacaoServico;
+$std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{3} = $infDeclaracaoPrestacaoServico;
+$std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{4} = $infDeclaracaoPrestacaoServico;
 
 header("Content-type: text/xml");
 Rps::save($std, './examples');

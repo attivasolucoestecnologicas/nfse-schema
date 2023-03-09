@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    EnviarLoteRpsEnvio -  é o elemento raiz (root) obrigatório que englobará todos os dados.
+-->
+<EnviarLoteRpsEnvio xmlns:xs="http://www.nfsebrasil.net.br/nfse/rps/xsd/rps.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <!-- 
+        - LoteRps
+        Atributos obrigatórios:
+            - codMunicipio - Inteiro - 7 dígitos obrigatoriamente;
+            - versao - Inteiro;
+            - id - Inteiro;
+        Elementos Obrigatórios:
+            - NumeroLote;
+            - Cnpj;
+            - InscricaoMunicipal;
+            - QuantidadeRps.
+    -->
+    <LoteRps>
+        <!-- 
+            - NumeroLote - Inteiro;
+        -->
+        <NumeroLote>1</NumeroLote>
+        <!-- 
+            - Cnpj - Inteiro Longo (long) - 14 dígitos obrigatoriamente;
+        -->
+        <Cnpj>19306845000138</Cnpj>
+        <!-- 
+            - InscricaoMunicipal - Caracter - Mínimo de 0 e máximo de 20 caracteres;
+        -->
+        <InscricaoMunicipal>132</InscricaoMunicipal>
+        <!-- 
+            - QuantidadeRps - Inteiro
+        -->
+        <QuantidadeRps>1</QuantidadeRps>
+        <!-- 
+            - ListaRps
+            Elementos Obrigatórios:
+                - ListaRps;
+        -->
+        <ListaRps>
+            <!-- 
+                - Rps
+                Elementos Obrigatórios:
+                    - InfRps;
+                    - DataEmissao;
+                    - NaturezaOperacao;
+            -->
+            <Rps>
+                <!-- 
+                    - InfRps
+                    Atributos obrigatórios:
+                        - id - Inteiro;
+                    Elementos Obrigatórios:
+                        - IdentificacaoRps;
+                -->
+                <InfRps>
+                    <!-- 
+                        - IdentificacaoRps
+                        Elementos Obrigatórios:
+                            - Numero;
+                            - Serie;
+                            - Tipo;
+                    --> 
+                    
+                    <IdentificacaoRps> 
+                        <!-- 
+                            - Numero - Inteiro;
+                        -->
+                        <Numero>1</Numero>
+                        <!-- 
+                            - Serie - Caracter - Mínimo de 0 e máximo de 20 dígitos.
+                        -->
+                        <Serie>0</Serie>
+                        <!-- 
+                            - Tipo - Inteiro;
+                        -->
+                        <Tipo>1</Tipo>
+                        
+                        
+                    </IdentificacaoRps>
+                    <!-- 
+                        - DataEmissao - DataHora;
+                    -->
+                    <DataEmissao>2018-02-28T10:00:00</DataEmissao>
+                    <!-- 
+                        - NaturezaOperacao - Inteiro - Obrigatoriamente 1 digito. Valores aceitos: [1,2].
+                    -->
+                    <NaturezaOperacao>1</NaturezaOperacao>
+                  
+                    
+                    <!-- 
+                        - OptanteSimplesNacional - Inteiro - Obrigatoriamente 1 digito. Valores aceitos: [1,2]. [1 – Sim; 2 – Não]
+                    -->
+                    <OptanteSimplesNacional>2</OptanteSimplesNacional>
+                    
+                     <!-- 
+                        - IncentivadorCultural - Inteiro - Obrigatoriamente 1 digito. Valores aceitos: [1,2]. [1 – Sim; 2 – Não]
+                    -->
+                    <IncentivadorCultural>2</IncentivadorCultural>
+
+                    <!-- 
+                        - Status - Inteiro - Obrigatoriamente 1 digito. Valores aceitos: [1,2]. [1 – Normal; 2 – Cancelado]
+                    -->
+                    <Status>1</Status>
+                    <!-- 
+                        - Servico
+                        Elementos Obrigatórios:
+                            - Valores;
+                    -->
+                    <Servico>
+                        <!-- 
+                            - Valores
+                            Elementos Obrigatórios:
+                                - ValorServicos;
+                        -->
+                        <Valores>
+                            <!-- 
+                                - ValorServicos - Decimal - De 1 a 15 dígitos mais duas casas decimais ("." como separador decimal).
+                            -->
+                            <ValorServicos>26.00</ValorServicos>
+                            <!-- 
+                                - ValorDeducoes - Decimal - De 1 a 15 dígitos mais duas casas decimais ("." como separador decimal).
+                            -->
+                            <ValorDeducoes>0.00</ValorDeducoes>
+                            <!-- 
+                                - ValorPis - Decimal - De 1 a 15 dígitos mais duas casas decimais ("." como separador decimal).
+                            -->
+                            <ValorPis>0.00</ValorPis>
+                            <!-- 
+                                - ValorCofins - Decimal - De 1 a 15 dígitos mais duas casas decimais ("." como separador decimal).
+                            -->
+                            <ValorCofins>0.00</ValorCofins>
+                            <!-- 
+                                - ValorInss - Decimal - De 1 a 15 dígitos mais duas casas decimais ("." como separador decimal).
+                            -->
+                            <ValorInss>0.00</ValorInss>
+                            <!-- 
+                                - ValorIr - Decimal - De 1 a 15 dígitos mais duas casas decimais ("." como separador decimal).
+                            -->
+                            <ValorIr>0.00</ValorIr>
+                            <!-- 
+                                - ValorCsll - Decimal - De 1 a 15 dígitos mais duas casas decimais ("." como separador decimal).
+                            -->
+                            <ValorCsll>0.00</ValorCsll>
+                            <!-- 
+                                - IssRetido - Inteiro - Valores Aceitos [1,2]
+                            -->
+                            <IssRetido>2</IssRetido>
+                            <!-- 
+                                - ValorIss - Decimal - De 1 a 15 dígitos mais duas casas decimais ("." como separador decimal).
+                            -->
+                            <ValorIss>0.78</ValorIss>
+                            <!-- 
+                                - OutrasRetencoes - Decimal - De 1 a 15 dígitos mais duas casas decimais ("." como separador decimal).
+                            -->
+                            <OutrasRetencoes>0.00</OutrasRetencoes>
+                             <!-- 
+                                - BaseCalculo - Decimal - De 1 a 15 dígitos mais duas casas decimais ("." como separador decimal).
+                            -->
+                            <BaseCalculo>26.00</BaseCalculo>
+                            <!-- 
+                                - Aliquota - Decimal - De 1 a 3 dígitos mais duas casas decimais ("." como separador decimal).
+                            -->
+                            <Aliquota>5.00</Aliquota>
+                           
+                            <!-- 
+                                - ValorLiquidoNfse - Decimal - De 1 a 3 dígitos mais duas casas decimais ("." como separador decimal).
+                            -->
+                            <ValorLiquidoNfse>2.00</ValorLiquidoNfse>
+
+                            <!-- 
+                                - DescontoIncondicionado - Decimal - De 1 a 15 dígitos mais duas casas decimais ("." como separador decimal).
+                            -->
+                            <DescontoIncondicionado>0.00</DescontoIncondicionado>
+                            <!-- 
+                                - DescontoCondicionado - Decimal - De 1 a 15 dígitos mais duas casas decimais ("." como separador decimal).
+                            -->
+                            <DescontoCondicionado>0.00</DescontoCondicionado>
+                        </Valores>
+						<!-- 
+                            - ItemListaServico - Caractere
+                        -->
+                        <ItemListaServico>25.01</ItemListaServico>
+						<!-- 
+                            - CodigoCnae - Caractere
+                        -->
+                        <CodigoCnae>9603304</CodigoCnae>
+						<!-- 
+                            - Discriminacao - Caractere - Mínimo de 1 e máximo de 2000.
+                        -->
+                        <Discriminacao>SERVICOS REALIZADOS</Discriminacao>
+						<!-- 
+                            - CodigoMunicipio - Inteiro - Obrigatoriamente 7 dígitos.
+                        -->
+                        <CodigoMunicipio>2708006</CodigoMunicipio>
+                    </Servico>
+                    <!-- 
+                        - Prestador
+                        Elementos Obrigatórios:
+                            - Cnpj;
+                            - InscricaoMunicipal;
+                    -->
+                    <Prestador>
+                        <!-- 
+                            - Cnpj- Caracter - 14 dígitos obrigatoriamente;
+                        -->
+                        <Cnpj>27091742000126</Cnpj>
+						<!-- 
+                            - InscricaoMunicipal - Inteiro - de 0 a 15 dígitos.
+                        -->
+                        <InscricaoMunicipal>17</InscricaoMunicipal>
+                    </Prestador>
+                    <!-- 
+                        - Tomador
+                        Elementos Obrigatórios:
+                            - IdentificacaoTomador;
+                            - RazaoSocial;
+                    -->
+                    <Tomador>
+                        <!-- 
+                            - IdentificacaoTomador;
+                        -->
+                        <IdentificacaoTomador>
+                            <!-- 
+                                - CpfCnpj - Caracter - Obrigatoriamente 11 ou 15 digitos.
+                                Elementos Obrigatórios:
+                                    - Cnpj;
+                            -->
+                            <CpfCnpj>
+                                
+                                
+                                 <!-- 
+                                    - CNPJ Caracter - Obrigatoriamente 14 (CNPJ)  digitos.
+                              
+                                 <Cnpj>11756884447</cnpj>
+                                 -->
+                                <!-- 
+                                    - CPF Caracter - Obrigatoriamente 11 (CPF)  digitos.
+                                -->
+                                <Cpf>11756884447</Cpf>
+                                
+                            </CpfCnpj>
+                            <!-- 
+                                - InscricaoMunicipal - Caracter - de 0 a 15 caracteres.
+                            -->                            
+                            <InscricaoMunicipal>0</InscricaoMunicipal>
+                        </IdentificacaoTomador>
+						<!-- 
+                            - RazaoSocial - Caracter - de 1 a 100 caracteres.
+                        -->
+                        <RazaoSocial>JOSE VINICIUS ALCANTARA LIMA</RazaoSocial>
+						<!-- 
+                            - Endereco.
+                        -->
+                        <Endereco>
+                            <!-- 
+                                - Endereco - Caracter - Opcional. Somente letras e números com mínimo de 0 e máximo de 10.
+                            -->
+                            <Endereco>POVOADO AREIA BRANCA</Endereco>
+                            <!-- 
+                                - Numero - byte - Letras e números entre 0 a 20 caracteres.
+                            -->
+                            <Numero>0</Numero>
+                            <!-- 
+                                - Complemento - Inteiro curto (short) - Letras e números entre 0 e 20 caracteres.
+                            -->
+                            <Complemento>0</Complemento>
+                            <!-- 
+                                - Bairro - Caractere - Entre 0 e 50 caracteres.
+                            -->
+                            <Bairro>ZONA RURAL</Bairro>
+                            <!-- 
+                                - CodigoMunicipio - Inteiro - Obrigatoriamente 7 dígitos.
+                            -->
+                            <CodigoMunicipio>2708006</CodigoMunicipio>
+                            <!-- 
+                                - Uf - Caractere - Obrigatoriamente 2 caracteres. Valores possíveis: [AC,AL,AP,AM,BA,CE,DF,ES,GO,MA,MT,MS,MG,PA,PB,PR,PE,PI,RR,RO,RJ,RN,RS,SC,SP,SE,TO]
+                            -->
+                            <Uf>AL</Uf>
+                            <!-- 
+                                - Cep - Caractere - Obrigariamente 8 digitos.
+                            -->
+                            <Cep>57500000</Cep>
+                        </Endereco>
+                        <Contato>
+                            
+                        <!-- 
+                            - Telefone (sem máscara) - Minimo 0 e máximo de 11 caracteres.
+                        -->
+						<Telefone>00000000000</Telefone>
+                        <!-- 
+                            - Email - Mínimo 0 e máximo de 255 caracteres.
+                        -->
+						<Email>teste@teste.com.br</Email>
+                      
+                        </Contato>
+                    </Tomador>
+                   
+                 
+                    <!-- 
+                        - ConstrucaoCivil
+                    -->
+                    <ConstrucaoCivil>
+                        <!-- 
+                            - CodigoObra - Caractere - Opcional - Mínimo de 0 e máximo de 15 caracteres.
+                        -->
+                        <CodigoObra>0</CodigoObra>
+                        <!-- 
+                            - Art - Caractere - Opcional - Mínimo de 0 e máximo de 15 caracteres.
+                        -->
+                        <Art>0</Art>
+                    </ConstrucaoCivil>
+                </InfRps>
+            </Rps>
+            <!-- mais RPS's -->
+        </ListaRps>
+    </LoteRps>
+</EnviarLoteRpsEnvio>

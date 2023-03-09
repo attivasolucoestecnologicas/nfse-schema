@@ -1090,15 +1090,7 @@
 
 	<xsd:element name="CompNfse" type="tcCompNfse" />
 
-	<xsd:element name="EnviarLoteRpsEnvio">
-		<xsd:complexType>
-			<xsd:sequence>
-				<xsd:element name="LoteRps" type="tcLoteRps" />
-				<xsd:element ref="dsig:Signature" minOccurs="0"
-					maxOccurs="1" />
-			</xsd:sequence>
-		</xsd:complexType>
-	</xsd:element>
+
 
 	<xsd:element name="EnviarLoteRpsResposta">
 		<xsd:complexType>

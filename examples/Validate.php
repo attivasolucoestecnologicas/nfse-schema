@@ -4,10 +4,13 @@
 //ini_set('display_errors', 'On');
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$xml = __DIR__ . "/Nfse.xml";
-$xsd = __DIR__ . "/../scheme/v2-03/nfse.txt";
+$xml = __DIR__ . "/Rps.xml";
+$xsd = __DIR__ . "/../scheme/v2-03/xmldsig-core-schema20020212.xsd";
 $content = file_get_contents($xml);
-$content = simplexml_load_string($content);
+//$content = simplexml_load_string($content);
+
+//print_r($content);
+//die();
 
 /**
  * Ao tentar validar um arquivo XML, se algum erro
@@ -18,38 +21,41 @@ $content = simplexml_load_string($content);
  * que esta função abaixo deve ser chamada antes de
  * instanciar qualquer objeto da classe DomDocument!
  */
-libxml_use_internal_errors(true);
+//libxml_use_internal_errors(true);
+//
+///* Cria um novo objeto da classe DomDocument */
+//$objDom = new DomDocument();
+//
+///* Carrega o arquivo XML */
+//$objDom->load($xml);
+//
+///* Tenta validar os dados utilizando o arquivo XSD */
+//if (!$objDom->schemaValidate($xsd)) {
+//
+//    /**
+//     * Se não foi possível validar, você pode capturar
+//     * todos os erros em um array
+//     */
+//    $arrayAllErrors = libxml_get_errors();
+//
+//    /**
+//     * Cada elemento do array $arrayAllErrors
+//     * será um objeto do tipo LibXmlError
+//     */
+//    print_r($arrayAllErrors);
+//
+//} else {
+//
+//    /* XML validado! */
+//    echo "XML obedece às regras definidas no arquivo XSD!";
+//
+//}
 
-/* Cria um novo objeto da classe DomDocument */
-$objDom = new DomDocument();
-
-/* Carrega o arquivo XML */
-$objDom->load($xml);
-
-/* Tenta validar os dados utilizando o arquivo XSD */
-if (!$objDom->schemaValidate($xsd)) {
-
-    /**
-     * Se não foi possível validar, você pode capturar
-     * todos os erros em um array
-     */
-    $arrayAllErrors = libxml_get_errors();
-
-    /**
-     * Cada elemento do array $arrayAllErrors
-     * será um objeto do tipo LibXmlError
-     */
-    print_r($arrayAllErrors);
-
-} else {
-
-    /* XML validado! */
-    echo "XML obedece às regras definidas no arquivo XSD!";
-
+try {
+    \NFePHP\Common\Validator::isValid($content, $xsd);
+} catch (\NFePHP\Common\Exception\ValidatorException $e) {
+    print_r($e->getMessage());
 }
 
-?>
 
-//$validator = \NFePHP\Common\Validator::isValid($content, $xsd);
 
-print_r($validator);
