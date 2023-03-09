@@ -4,27 +4,37 @@
         <Numero>123456</Numero>
         <CodigoVerificacao>123</CodigoVerificacao>
         <DataEmissao>2023-03-07T15:29:00</DataEmissao>
+        <NfseSubstituida>123</NfseSubstituida>
+        <OutrasInformacoes>Informações complementares</OutrasInformacoes>
         <ValoresNfse>
+            <BaseCalculo>0</BaseCalculo>
+            <Aliquota>0</Aliquota>
+            <ValorIss>0</ValorIss>
             <ValorLiquidoNfse>123435.77</ValorLiquidoNfse>
         </ValoresNfse>
+        <ValorCredito>0</ValorCredito>
         <PrestadorServico>
             <IdentificacaoPrestador>
                 <CpfCnpj>
                     <Cpf>12345678901</Cpf>
                 </CpfCnpj>
+                <InscricaoMunicipal>9876543210</InscricaoMunicipal>
             </IdentificacaoPrestador>
             <RazaoSocial>Fulano de Tal</RazaoSocial>
             <NomeFantasia>Armazem</NomeFantasia>
             <Endereco>
                 <Endereco>Rua Teste</Endereco>
-                <Bairro/>
-                <CodigoMunicipio/>
-                <Uf/>
-                <CodigoPais/>
-                <Cep/>
+                <Numero>22</Numero>
+                <Complemento>Sem complemento</Complemento>
+                <Bairro>Centro</Bairro>
+                <CodigoMunicipio>82</CodigoMunicipio>
+                <Uf>AL</Uf>
+                <CodigoPais>10</CodigoPais>
+                <Cep>55555555</Cep>
             </Endereco>
             <Contato>
                 <Telefone>8899999999</Telefone>
+                <Email>none@mail.com</Email>
             </Contato>
         </PrestadorServico>
         <OrgaoGerador>
@@ -48,7 +58,7 @@
                     </RpsSubstituido>
                     <Id>1234</Id>
                 </Rps>
-                <Competencia>02/2023</Competencia>
+                <Competencia>2023-02-09</Competencia>
                 <Servico>
                     <Valores>
                         <ValorServicos>1000</ValorServicos>
@@ -95,11 +105,13 @@
                     <RazaoSocial>123456789</RazaoSocial>
                     <Endereco>
                         <Endereco>Rua Teste</Endereco>
-                        <Bairro/>
-                        <CodigoMunicipio/>
-                        <Uf/>
-                        <CodigoPais/>
-                        <Cep/>
+                        <Numero>SN</Numero>
+                        <Complemento>Sem complemento</Complemento>
+                        <Bairro>Centro</Bairro>
+                        <CodigoMunicipio>82</CodigoMunicipio>
+                        <Uf>AL</Uf>
+                        <CodigoPais>10</CodigoPais>
+                        <Cep>00000000</Cep>
                     </Endereco>
                     <Contato>
                         <Telefone>8899999999</Telefone>
@@ -119,6 +131,7 @@
                     <CodigoObra>001</CodigoObra>
                     <Art>111</Art>
                 </ConstrucaoCivil>
+                <RegimeEspecialTributacao>1</RegimeEspecialTributacao>
                 <OptanteSimplesNacional>1</OptanteSimplesNacional>
                 <IncentivoFiscal>2</IncentivoFiscal>
                 <Id>001</Id>
