@@ -17,6 +17,8 @@ class InfDeclaracaoPrestacaoServico
     {
         $node = $dom->createElement('InfDeclaracaoPrestacaoServico');
 
+        $node->setAttribute('Id', $std->id);
+
         InfRps::mount($std->rps, $dom, $node);
         $dom->addChild($node, "Competencia", $std->competencia, true);
         Servico::mount($std->servico, $dom, $node);
@@ -27,7 +29,6 @@ class InfDeclaracaoPrestacaoServico
         $dom->addChild($node, "RegimeEspecialTributacao", $std->regimeespecialtributacao, false);
         $dom->addChild($node, "OptanteSimplesNacional", $std->optantesimplesnacional, true);
         $dom->addChild($node, "IncentivoFiscal", $std->incentivofiscal, true);
-        $dom->addChild($node, "Id", $std->id, true);
 
         $parent->appendChild($node);
         $dom->appendChild($parent);

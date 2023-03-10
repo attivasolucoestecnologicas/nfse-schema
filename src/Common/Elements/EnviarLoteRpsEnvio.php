@@ -15,6 +15,8 @@ class EnviarLoteRpsEnvio
     {
         $node = $dom->createElement($element);
 
+        $node->setAttribute('xmlns', "https://wjdev.net.br/abrasf/v203/nfse.xsd");
+
         LoteRps::mount($std->enviarloterpsenvio, $dom, $node);
 
         $dom->appendChild($node);

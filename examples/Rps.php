@@ -9,11 +9,11 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $std = new stdClass;
 $std->EnviarLoteRpsEnvio = new stdClass();
 $std->EnviarLoteRpsEnvio->Loterps = new stdClass();
-$std->EnviarLoteRpsEnvio->Loterps->NumeroLote = '123456';
+$std->EnviarLoteRpsEnvio->Loterps->NumeroLote = '123456789012345';
 $std->EnviarLoteRpsEnvio->Loterps->CpfCnpj = '12345678901234';
 $std->EnviarLoteRpsEnvio->Loterps->InscricaoMunicipal = '123456789';
 $std->EnviarLoteRpsEnvio->Loterps->QuantidadeRps = 2;
-$std->EnviarLoteRpsEnvio->Loterps->Id = 'Lote';
+$std->EnviarLoteRpsEnvio->Loterps->Id = '001';
 $std->EnviarLoteRpsEnvio->Loterps->versao = '2.03';
 
 $std->EnviarLoteRpsEnvio->Loterps->ListaRps = new \stdClass();
@@ -57,7 +57,7 @@ $infDeclaracaoPrestacaoServico->Servico->CodigoTributacaoMunicipio = "001";
 $infDeclaracaoPrestacaoServico->Servico->CodigoNbs = '001';
 $infDeclaracaoPrestacaoServico->Servico->Discriminacao = 'Conteúdo da NFS-e';
 $infDeclaracaoPrestacaoServico->Servico->CodigoMunicipio = 123;
-$infDeclaracaoPrestacaoServico->Servico->CodigoPais = '001';
+$infDeclaracaoPrestacaoServico->Servico->CodigoPais = '1234';
 $infDeclaracaoPrestacaoServico->Servico->ExigibilidadeISS = 1;
 $infDeclaracaoPrestacaoServico->Servico->MunicipioIncidencia = 1;
 $infDeclaracaoPrestacaoServico->Servico->NumeroProcesso = '001';
@@ -79,13 +79,14 @@ $infDeclaracaoPrestacaoServico->TomadorServico->Endereco->Complemento = 'Sem com
 $infDeclaracaoPrestacaoServico->TomadorServico->Endereco->Bairro = 'Centro';
 $infDeclaracaoPrestacaoServico->TomadorServico->Endereco->CodigoMunicipio = 0122;
 $infDeclaracaoPrestacaoServico->TomadorServico->Endereco->Uf = 'AL';
-$infDeclaracaoPrestacaoServico->TomadorServico->Endereco->CodigoPais = 012;
+$infDeclaracaoPrestacaoServico->TomadorServico->Endereco->CodigoPais = 1001;
 $infDeclaracaoPrestacaoServico->TomadorServico->Endereco->Cep = '00000000';
 $infDeclaracaoPrestacaoServico->TomadorServico->Contato = new stdClass();
 $infDeclaracaoPrestacaoServico->TomadorServico->Contato->Telefone = "8899999999";
 $infDeclaracaoPrestacaoServico->TomadorServico->Contato->Email = "none@none.com";
 $infDeclaracaoPrestacaoServico->Intermediario = new stdClass(); // NULL
 $infDeclaracaoPrestacaoServico->Intermediario->RazaoSocial = 'Empresa teste'; // NULL
+$infDeclaracaoPrestacaoServico->Intermediario->CodigoMunicipio = '1234567';
 $infDeclaracaoPrestacaoServico->Intermediario->IdentificacaoIntermediario = new stdClass(); // NULL
 $infDeclaracaoPrestacaoServico->Intermediario->IdentificacaoIntermediario->CpfCnpj = '12345678901';
 $infDeclaracaoPrestacaoServico->Intermediario->IdentificacaoIntermediario->InscricaoMunicipal = '123456789';
@@ -104,5 +105,5 @@ $std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{1} = $infDeclaracaoPrestacaoS
 
 header("Content-type: text/xml");
 Rps::save($std, './examples');
-$rps = Rps::render($std);
-echo $rps;
+//$rps = Rps::render($std);
+//echo $rps;

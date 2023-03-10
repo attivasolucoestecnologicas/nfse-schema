@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="https://wjdev.net.br/abrasf/schemes/servico_enviar_lote_rps_envio" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://wjdev.net.br/abrasf/schemes/servico_enviar_lote_rps_envio" xmlns:tipos="https://wjdev.net.br/abrasf/schemes/tipos" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+    <xsd:import schemaLocation="tipos_v02.xsd" namespace="https://wjdev.net.br/abrasf/schemes/tipos"></xsd:import>
+    <xsd:import schemaLocation="xmldsig-core-schema_v02.xsd" namespace="http://www.w3.org/2000/09/xmldsig#"></xsd:import>
+
+	<xsd:element name="EnviarLoteRpsEnvio">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="NumeroLote" type="tipos:tsNumeroLote" maxOccurs="1" minOccurs="1" />
+				<xsd:element name="Cnpj" type="tipos:TsCnpj" maxOccurs="1" minOccurs="1" />
+				<xsd:element name="InscricaoMunicipal" type="tipos:tsInscricaoMunicipal" maxOccurs="1" minOccurs="1" />
+				<xsd:element name="QuantidadeRps" type="tipos:TsQuantidadeRps" maxOccurs="1" minOccurs="1" />
+				<xsd:element name="ListaRps" maxOccurs="1" minOccurs="1">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Rps" type="tipos:TcRps" maxOccurs="unbounded" minOccurs="1">
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="ds:Signature" maxOccurs="1" minOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

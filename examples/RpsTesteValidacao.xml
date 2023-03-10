@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnviarLoteRpsEnvio xmlns="https://wjdev.net.br/abrasf/v203/nfse.xsd">
     <LoteRps Id="001" versao="2.03">
-        <NumeroLote>123456789012345</NumeroLote>
+        <NumeroLote>123456</NumeroLote>
         <CpfCnpj>
             <Cnpj>12345678901234</Cnpj>
         </CpfCnpj>
@@ -76,7 +76,7 @@
                             <Bairro>Centro</Bairro>
                             <CodigoMunicipio>82</CodigoMunicipio>
                             <Uf>AL</Uf>
-                            <CodigoPais>1001</CodigoPais>
+                            <CodigoPais>1023</CodigoPais>
                             <Cep>00000000</Cep>
                         </Endereco>
                         <Contato>

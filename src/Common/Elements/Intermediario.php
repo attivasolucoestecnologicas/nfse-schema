@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Ativasolucoestecnologicas\Nfse\Common\Elements;
-
 
 use NFePHP\Common\DOMImproved;
 
@@ -20,6 +18,7 @@ class Intermediario
 
         IdentificacaoPrestador::mount($std->identificacaointermediario, $dom, $node, 'IdentificacaoIntermediario');
         $dom->addChild($node, "RazaoSocial", $std->razaosocial, false);
+        $dom->addChild($node, "CodigoMunicipio", $std->codigomunicipio, false);
 
         $parent->appendChild($node);
         $dom->appendChild($parent);

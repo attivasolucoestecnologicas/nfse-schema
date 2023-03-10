@@ -18,6 +18,9 @@ class LoteRps
     {
         $node = $dom->createElement($element);
 
+        $node->setAttribute('Id', $std->loterps->id);
+        $node->setAttribute('versao', $std->loterps->versao);
+
         $dom->addChild(
             $node,
             "NumeroLote",
@@ -41,20 +44,6 @@ class LoteRps
         );
 
         ListaRps::mount($std->loterps->listarps, $dom, $node);
-
-        $dom->addChild(
-            $node,
-            "Id",
-            $std->loterps->id,
-            true
-        );
-
-        $dom->addChild(
-            $node,
-            "versao",
-            $std->loterps->versao,
-            true
-        );
 
         $parent->appendChild($node);
         $dom->appendChild($parent);
