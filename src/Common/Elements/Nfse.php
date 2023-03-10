@@ -15,9 +15,9 @@ class Nfse
     public static function mount($std, $dom, $parent, $element = 'Nfse')
     {
         $node = $dom->createElement($element);
+        $node->setAttribute('versao', $std->versao);
 
         InfNfse::mount($std->infnfse, $dom, $node);
-        $dom->addChild($node, "versao", $std->versao, true);
 
         $parent->appendChild($node);
         $dom->appendChild($parent);

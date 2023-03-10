@@ -18,6 +18,8 @@ class InfNfse
     {
         $node = $dom->createElement($element);
 
+        $node->setAttribute('Id', $std->id);
+
         $dom->addChild(
             $node,
             "Numero",
@@ -63,16 +65,6 @@ class InfNfse
         OrgaoGerador::mount($std->orgaogerador, $dom, $node);
 
         DeclaracaoPrestacaoServico::mount($std->declaracaoprestacaoservico, $dom, $node);
-
-        $dom->addChild(
-            $node,
-            "Id",
-            $std->id,
-            true
-        );
-
-//        $dom->addChild($node, "versaoDados", $std->codigoobra, false);
-//        $dom->addChild($node, "versao", $std->art, true);
 
         $parent->appendChild($node);
         $dom->appendChild($parent);

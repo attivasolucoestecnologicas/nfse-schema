@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$xml = __DIR__ . "/Rps.xml";
+$xml = __DIR__ . "/Nfse.xml";
 //$xsd = __DIR__ . "/../schemes/servico_enviar_lote_rps_envio_v03.xsd";
 $xsd = __DIR__ . "/../scheme/v2-03/nfse.xsd";
 // $xsd = __DIR__ . "/../scheme/v2-03/nfse.xsd";

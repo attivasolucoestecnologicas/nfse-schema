@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CompNfse>
-    <Nfse>
-        <InfNfse>
+<CompNfse xmlns="https://wjdev.net.br/abrasf/v203/nfse.xsd">
+    <Nfse versao="2.30">
+        <InfNfse Id="123">
             <Numero>123456</Numero>
             <CodigoVerificacao>123</CodigoVerificacao>
             <DataEmissao>2023-03-07T15:29:00</DataEmissao>
@@ -30,7 +30,7 @@
                     <Bairro>Centro</Bairro>
                     <CodigoMunicipio>82</CodigoMunicipio>
                     <Uf>AL</Uf>
-                    <CodigoPais>10</CodigoPais>
+                    <CodigoPais>1001</CodigoPais>
                     <Cep>55555555</Cep>
                 </Endereco>
                 <Contato>
@@ -43,8 +43,8 @@
                 <Uf>AL</Uf>
             </OrgaoGerador>
             <DeclaracaoPrestacaoServico>
-                <InfDeclaracaoPrestacaoServico>
-                    <Rps>
+                <InfDeclaracaoPrestacaoServico Id="001">
+                    <Rps Id="1234">
                         <IdentificacaoRps>
                             <Numero>1234</Numero>
                             <Serie>ABC</Serie>
@@ -57,7 +57,6 @@
                             <Serie>ABC</Serie>
                             <Tipo>1</Tipo>
                         </RpsSubstituido>
-                        <Id>1234</Id>
                     </Rps>
                     <Competencia>2023-02-09</Competencia>
                     <Servico>
@@ -84,7 +83,7 @@
                         <CodigoNbs>001</CodigoNbs>
                         <Discriminacao>Conteúdo da NFS-e</Discriminacao>
                         <CodigoMunicipio>123</CodigoMunicipio>
-                        <CodigoPais>001</CodigoPais>
+                        <CodigoPais>1001</CodigoPais>
                         <ExigibilidadeISS>1</ExigibilidadeISS>
                         <MunicipioIncidencia>1</MunicipioIncidencia>
                         <NumeroProcesso>001</NumeroProcesso>
@@ -111,7 +110,7 @@
                             <Bairro>Centro</Bairro>
                             <CodigoMunicipio>82</CodigoMunicipio>
                             <Uf>AL</Uf>
-                            <CodigoPais>10</CodigoPais>
+                            <CodigoPais>1001</CodigoPais>
                             <Cep>00000000</Cep>
                         </Endereco>
                         <Contato>
@@ -127,6 +126,7 @@
                             <InscricaoMunicipal>123456789</InscricaoMunicipal>
                         </IdentificacaoIntermediario>
                         <RazaoSocial>Empresa teste</RazaoSocial>
+                        <CodigoMunicipio>1234567</CodigoMunicipio>
                     </Intermediario>
                     <ConstrucaoCivil>
                         <CodigoObra>001</CodigoObra>
@@ -135,13 +135,8 @@
                     <RegimeEspecialTributacao>1</RegimeEspecialTributacao>
                     <OptanteSimplesNacional>1</OptanteSimplesNacional>
                     <IncentivoFiscal>2</IncentivoFiscal>
-                    <Id>001</Id>
                 </InfDeclaracaoPrestacaoServico>
             </DeclaracaoPrestacaoServico>
-            <Id>123</Id>
         </InfNfse>
-        <versao>2.30</versao>
     </Nfse>
-    <NfseCancelamento/>
-    <NfseSubstituicao/>
 </CompNfse>

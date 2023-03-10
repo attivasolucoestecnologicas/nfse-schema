@@ -46,7 +46,7 @@ $std->CompNfse->Nfse->InfNfse->PrestadorServico->Endereco->Complemento = 'Sem co
 $std->CompNfse->Nfse->InfNfse->PrestadorServico->Endereco->Bairro = 'Centro';
 $std->CompNfse->Nfse->InfNfse->PrestadorServico->Endereco->CodigoMunicipio = 0122;
 $std->CompNfse->Nfse->InfNfse->PrestadorServico->Endereco->Uf = 'AL';
-$std->CompNfse->Nfse->InfNfse->PrestadorServico->Endereco->CodigoPais = 012;
+$std->CompNfse->Nfse->InfNfse->PrestadorServico->Endereco->CodigoPais = 1001;
 $std->CompNfse->Nfse->InfNfse->PrestadorServico->Endereco->Cep = '55555555';
 
 $std->CompNfse->Nfse->InfNfse->PrestadorServico->Contato = new stdClass();
@@ -96,7 +96,7 @@ $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Servico->CodigoTribut
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Servico->CodigoNbs = '001';
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Servico->Discriminacao = 'Conteúdo da NFS-e';
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Servico->CodigoMunicipio = 123;
-$std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Servico->CodigoPais = '001';
+$std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Servico->CodigoPais = '1001';
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Servico->ExigibilidadeISS = 1;
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Servico->MunicipioIncidencia = 1;
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Servico->NumeroProcesso = '001';
@@ -118,13 +118,14 @@ $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->TomadorServico->Ender
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->TomadorServico->Endereco->Bairro = 'Centro';
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->TomadorServico->Endereco->CodigoMunicipio = 0122;
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->TomadorServico->Endereco->Uf = 'AL';
-$std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->TomadorServico->Endereco->CodigoPais = 012;
+$std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->TomadorServico->Endereco->CodigoPais = 1001;
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->TomadorServico->Endereco->Cep = '00000000';
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->TomadorServico->Contato = new stdClass();
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->TomadorServico->Contato->Telefone = "8899999999";
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->TomadorServico->Contato->Email = "none@none.com";
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Intermediario = new stdClass(); // NULL
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Intermediario->RazaoSocial = 'Empresa teste'; // NULL
+$std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Intermediario->CodigoMunicipio = '1234567';
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Intermediario->IdentificacaoIntermediario = new stdClass(); // NULL
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Intermediario->IdentificacaoIntermediario->CpfCnpj = '12345678901';
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Intermediario->IdentificacaoIntermediario->InscricaoMunicipal = '123456789';
@@ -138,5 +139,5 @@ $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Id = '001'; // OK
 
 header("Content-type: text/xml");
 Nfse::save($std, './examples');
-$nfse = Nfse::render($std);
-echo $nfse;
+//$nfse = Nfse::render($std);
+//echo $nfse;

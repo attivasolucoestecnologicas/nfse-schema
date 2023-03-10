@@ -15,9 +15,11 @@ class CompNfse
     {
         $node = $dom->createElement($element);
 
+        $node->setAttribute('xmlns', 'https://wjdev.net.br/abrasf/v203/nfse.xsd');
+
         Nfse::mount($std->nfse, $dom, $node);
-        NfseCancelamento::mount($std, $dom, $node); // Não Utilizado mas só para apresentação
-        NfseSubstituicao::mount($std, $dom, $node); // Não Utilizado mas só para apresentação
+//        NfseCancelamento::mount($std, $dom, $node); // Não Utilizado mas só para apresentação
+//        NfseSubstituicao::mount($std, $dom, $node); // Não Utilizado mas só para apresentação
 
         $dom->appendChild($node);
     }
