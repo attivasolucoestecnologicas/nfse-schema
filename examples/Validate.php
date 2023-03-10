@@ -1,13 +1,14 @@
 <?php
 
-//error_reporting(E_ALL);
-//ini_set('display_errors', 'On');
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $xml = __DIR__ . "/Rps.xml";
-$xsd = __DIR__ . "/../scheme/v2-03/xmldsig-core-schema20020212.xsd";
+$xsd = __DIR__ . "/versa/nfse_v201.xsd";
+// $xsd = __DIR__ . "/../scheme/v2-03/nfse.xsd";
 $content = file_get_contents($xml);
-//$content = simplexml_load_string($content);
+// $content = simplexml_load_string($content);
 
 //print_r($content);
 //die();

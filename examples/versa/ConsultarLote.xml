@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ConsultarLoteRpsEnvio xmlns="http://nfedemo.portalfacil.com.br/nfseserv/schema/nfse_v202.xsd">
+<Prestador><CpfCnpj><Cnpj>38543146000156</Cnpj></CpfCnpj><InscricaoMunicipal>10973</InscricaoMunicipal></Prestador>
+<Protocolo>408562</Protocolo>
+</ConsultarLoteRpsEnvio>

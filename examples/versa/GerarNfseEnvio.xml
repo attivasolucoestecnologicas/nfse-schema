@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<GerarNfseEnvio xmlns="http://localhost/webgv/schema/nfse_v201.xsd">
+<Rps>
+<InfDeclaracaoPrestacaoServico><Rps Id="RPS_67_UNICA_1"><IdentificacaoRps><Numero>74967984910</Numero><Serie>UNICA</Serie><Tipo>1</Tipo></IdentificacaoRps><DataEmissao>2016-06-02</DataEmissao><Status>1</Status></Rps><Competencia>2016-06-02</Competencia><Servico><Valores><ValorServicos>1685.50</ValorServicos><ValorDeducoes>0.00</ValorDeducoes><ValorPis>0.00</ValorPis><ValorCofins>0.00</ValorCofins><ValorInss>0.00</ValorInss><ValorIr>0.00</ValorIr><ValorCsll>0.00</ValorCsll><OutrasRetencoes>0.00</OutrasRetencoes><ValorIss>72.48</ValorIss><Aliquota>0.043</Aliquota><DescontoIncondicionado>0.00</DescontoIncondicionado><DescontoCondicionado>0.00</DescontoCondicionado></Valores><IssRetido>2</IssRetido><ItemListaServico>01.01</ItemListaServico><Discriminacao>CAPTACAO, EAEEEAAARECEPCAO E ENCAMINHAMENTO DE PEDIDOS DE EMPRESTIMOS, FINANCIAMENTOS, PROPOSTAS DE CARTAO DE CREDITO E LIBERACAO DE EMPRESTIMO|IRRF 1,50% VALOR" 201,49</Discriminacao><CodigoMunicipio>3126109</CodigoMunicipio><CodigoPais>1058</CodigoPais><ExigibilidadeISS>1</ExigibilidadeISS><MunicipioIncidencia>3126109</MunicipioIncidencia></Servico><Prestador><CpfCnpj><Cnpj>11111111111111</Cnpj></CpfCnpj><InscricaoMunicipal>10973</InscricaoMunicipal></Prestador><TomadorServico><IdentificacaoTomador><CpfCnpj><Cnpj>99999999000191</Cnpj></CpfCnpj><InscricaoMunicipal>1733160024</InscricaoMunicipal></IdentificacaoTomador><RazaoSocial>INSCRICAO DE TESTE</RazaoSocial><Endereco><Endereco>RUA PRINCIPAL</Endereco><Numero>123</Numero><Complemento>Compl Teste</Complemento><Bairro>centro</Bairro><CodigoMunicipio>3126109</CodigoMunicipio><Uf>MG</Uf><CodigoPais>1058</CodigoPais><Cep>96020360</Cep></Endereco><Contato><Telefone>1122223333</Telefone><Email>nome@provedor.com.br</Email></Contato></TomadorServico><RegimeEspecialTributacao>1</RegimeEspecialTributacao><OptanteSimplesNacional>2</OptanteSimplesNacional><IncentivoFiscal>2</IncentivoFiscal></InfDeclaracaoPrestacaoServico><Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="NfseAss_InfDec_Rps_52597f959c69c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#InfDec_Rps_52597f959c69c"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>LAWFUghQDkTcME8LGcRULocA2fU=</DigestValue></Reference></SignedInfo><SignatureValue>RYcZKDyvWpEtHtOUAal0ihBguuNuFMRSthMVkwmtYfjJ/fgLvCIZOgW4DmCN+VWdgocqY32gOH0Ozo+Zgy83ypsC+D16RjJpgxW9mR1OyG3HTVZnIF3eGuDv6n22zDSDRLTf2h1Sjcr2+7sKSHMevlHAGY1SAn/9L6hgzEut8Gg=</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIDtjCCAx+gAwIBAgIJAJ6k4ZJFBX2fMA0GCSqGSIb3DQEBBQUAMIGNMQswCQYDVQQGEwJCUjEV
+MBMGA1UECBMMTWluYXMgR2VyYWlzMQswCQYDVQQHEwJCSDERMA8GA1UECxMITkZTRVNFUlYxETAP
+BgNVBAsTCE5GU0VTRVJWMSEwHwYDVQQLExhBdXRlbnRpY2FkbyBwb3IgTkZTRVNFUlYxETAPBgNV
+BAMTCE5GU0VTRVJWMB4XDTEzMTAxNDE4NDM1OVoXDTIzMDgyMzE4NDM1OVowgboxCzAJBgNVBAYT
+AkJSMRUwEwYDVQQIEwxNaW5hcyBHZXJhaXMxHDAaBgNVBAcTE1BSRUZFSVRVUkEgTkZTRVNFUlYx
+HDAaBgNVBAsTE1BSRUZFSVRVUkEgTkZTRVNFUlYxHDAaBgNVBAsTE1BSRUZFSVRVUkEgTkZTRVNF
+UlYxHDAaBgNVBAsTE1BSRUZFSVRVUkEgTkZTRVNFUlYxHDAaBgNVBAMTE1BSRUZFSVRVUkEgTkZT
+RVNFUlYwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALSgv1ri6jUwxCzzSos7hYVQZxvmKF1D
+uFSq/dhQqDDusVlESfMQm30ANHbDBAHMiW1Ov22e/GKabU9x5w8nXyFMn257WDXGb99CLnszqiHS
+5EajickB6RDYcV4+a0Iuw1giWspdUt4XLWCU0+DMt9952sMiUTeeSRhcfZbr3NMRAgMBAAGjge4w
+geswCQYDVR0TBAIwADALBgNVHQ8EBAMCBeAwEwYDVR0lBAwwCgYIKwYBBQUHAwIwgbsGA1UdEQSB
+szCBsKA6BgVgTAEDAqAxDC9QUkVGRUlUVVJBIE1VTklDSVBBTCBERSBTQU5UTyBBTlRPTklPIERP
+IEFNUEFST6AZBgVgTAEDA6AQDA4yNDk5Njk2OTAwMDEyMqA+BgVgTAEDBKA1DDMxOTEwMTk4MTk5
+OTk5OTk5OTk5MTExMTExMTExMTE3Nzc3Nzc3Nzc3Nzc3NzdFUlBTTUegFwYFYEwBAwegDgwMMTEx
+MTExMTExMTExMA0GCSqGSIb3DQEBBQUAA4GBAA6wGDBbiDuJSz2F7ZMBD7Y0/bPreoejmraVPMda
+kPLT9mzeleud9N3yInI9Qu62f5+B/3rFu5cIJeeDMENpxlALBQDMexAm6/52daQ7gMSfdxSA2f+L
+9e1uRw7m0twyunREUFVCJFlUZ/vr12RZhRJl3TkBqWUx5QcTBC0oxlBH
+</X509Certificate></X509Data></KeyInfo></Signature>
+</Rps></GerarNfseEnvio>

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ConsultarLoteRpsEnvio xmlns="http://localhost/webgv/schema/nfse_v201.xsd">
+<Prestador><CpfCnpj><Cnpj>33333333333333</Cnpj></CpfCnpj><InscricaoMunicipal>111</InscricaoMunicipal></Prestador>
+<Protocolo>102534</Protocolo>
+</ConsultarLoteRpsEnvio>

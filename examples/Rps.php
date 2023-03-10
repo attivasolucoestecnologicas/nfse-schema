@@ -98,9 +98,9 @@ $infDeclaracaoPrestacaoServico->IncentivoFiscal = 2;  // 1 - SIM | 2 - NÃO - OK
 $infDeclaracaoPrestacaoServico->Id = '001'; // OK
 
 $std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{1} = $infDeclaracaoPrestacaoServico;
-$std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{2} = $infDeclaracaoPrestacaoServico;
-$std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{3} = $infDeclaracaoPrestacaoServico;
-$std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{4} = $infDeclaracaoPrestacaoServico;
+// $std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{2} = $infDeclaracaoPrestacaoServico;
+// $std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{3} = $infDeclaracaoPrestacaoServico;
+// $std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{4} = $infDeclaracaoPrestacaoServico;
 
 header("Content-type: text/xml");
 Rps::save($std, './examples');
