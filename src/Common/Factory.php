@@ -6,6 +6,7 @@ use Ativasolucoestecnologicas\Nfse\Factories\Nfse;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\EnviarLoteRps as EnviarLoteRpsRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\EnviarLoteRpsSincrono as EnviarLoteRpsSincronoRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\EnviarLoteRps as EnviarLoteRpsResponse;
+use Ativasolucoestecnologicas\Nfse\Factories\Response\EnviarLoteRpsSincrono as EnviarLoteRpsSincronoResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Rps;
 
 class Factory
@@ -15,6 +16,7 @@ class Factory
     const ENVIO_LOTE_RPS_ENVIO = 'EnviarLoteRpsEnvio';
     const ENVIO_LOTE_RPS_SINCRONO_ENVIO = 'EnviarLoteRpsSincronoEnvio';
     const ENVIO_LOTE_RPS_RESPOSTA = 'EnviarLoteRpsResposta';
+    const ENVIO_LOTE_RPS_SINCRONO_RESPOSTA = 'EnviarLoteRpsSincronoResposta';
 
     public static function render($std, $type)
     {
@@ -29,6 +31,8 @@ class Factory
                 return new EnviarLoteRpsResponse($std);
             case self::ENVIO_LOTE_RPS_SINCRONO_ENVIO :
                 return new EnviarLoteRpsSincronoRequest($std);
+            case self::ENVIO_LOTE_RPS_SINCRONO_RESPOSTA :
+                return new EnviarLoteRpsSincronoResponse($std);
             default:
                 return '';
         }

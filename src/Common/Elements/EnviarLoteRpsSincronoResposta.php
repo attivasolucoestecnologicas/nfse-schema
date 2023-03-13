@@ -28,7 +28,7 @@ class EnviarLoteRpsSincronoResposta
         ListaMensagemRetorno::mount($std->listamensagemretorno, $dom, $node);
 
         ListaMensagemRetornoLote::mount($std->listamensagemretornolote, $dom, $node);
-        
+
         $dom->appendChild($node);
     }
 }
