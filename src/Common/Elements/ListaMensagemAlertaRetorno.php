@@ -4,7 +4,7 @@ namespace Ativasolucoestecnologicas\Nfse\Common\Elements;
 
 use NFePHP\Common\DOMImproved;
 
-class ListaMensagemRetorno
+class ListaMensagemAlertaRetorno
 {
     /**
      * @param \stdClass $std
@@ -12,12 +12,12 @@ class ListaMensagemRetorno
      * @param \DOMNode $parent
      * @param string $element
      */
-    public static function mount($std, $dom, $parent, $element = 'ListaMensagemRetorno')
+    public static function mount($std, $dom, $parent, $element = 'ListaMensagemAlertaRetorno')
     {
         $node = $dom->createElement($element);
 
-        foreach ($std->mensagemretorno as $mensagem) {
-            MensagemRetorno::mount($mensagem, $dom, $node);
+        foreach ($std->listamensagemalertaretorno as $item) {
+            MensagemRetorno::mount($item, $dom, $node);
         }
 
         $parent->appendChild($node);
