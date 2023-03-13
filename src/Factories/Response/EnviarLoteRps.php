@@ -1,13 +1,13 @@
 <?php
 
-namespace Ativasolucoestecnologicas\Nfse\Factories;
+namespace Ativasolucoestecnologicas\Nfse\Factories\Response;
 
 use Ativasolucoestecnologicas\Nfse\Common\Elements\EnviarLoteRpsResposta as ElementEnviarLoteRpsResposta;
 use Ativasolucoestecnologicas\Nfse\Common\Base;
 use DOMNode;
 use stdClass;
 
-class EnviarLoteRpsResposta extends Base
+class EnviarLoteRps extends Base
 {
     /**
      * @var DOMNode
