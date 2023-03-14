@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnviarLoteRpsResposta xmlns="https://wjdev.net.br/abrasf/v203/nfse.xsd">
     <NumeroLote>001</NumeroLote>
-    <DataRecebimento>2023-03-13T17:13:37</DataRecebimento>
+    <DataRecebimento>2023-03-14T14:28:07</DataRecebimento>
     <Protocolo>001</Protocolo>
 </EnviarLoteRpsResposta>

@@ -104,6 +104,6 @@ $std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{1} = $infDeclaracaoPrestacaoS
 // $std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{4} = $infDeclaracaoPrestacaoServico;
 
 header("Content-type: text/xml");
-Rps::save($std, './examples');
+Rps::save($std, 'examples/xml');
 //$rps = Rps::render($std);
 //echo $rps;
