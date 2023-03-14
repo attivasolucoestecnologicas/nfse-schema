@@ -7,6 +7,7 @@ use Ativasolucoestecnologicas\Nfse\Factories\Request\CancelarNfse as CancelarNfs
 use Ativasolucoestecnologicas\Nfse\Factories\Request\EnviarLoteRps as EnviarLoteRpsRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\EnviarLoteRpsSincrono as EnviarLoteRpsSincronoRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\GerarNfse as GerarNfseRequest;
+use Ativasolucoestecnologicas\Nfse\Factories\Response\CancelarNfse as CancelarNfseResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\EnviarLoteRps as EnviarLoteRpsResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\EnviarLoteRpsSincrono as EnviarLoteRpsSincronoResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Rps;
@@ -22,6 +23,7 @@ class Factory
     const GERA_NFSE_ENVIO = 'GerarNfseEnvio';
     const GERA_NFSE_RESPOSTA = 'GerarNfseResposta';
     const CANCELA_NFSE_ENVIO = 'CancelarNfseEnvio';
+    const CANCELA_NFSE_RESPOSTA = 'CancelarNfseResposta';
 
     public function render($std, $type)
     {
@@ -42,6 +44,8 @@ class Factory
                 return new GerarNfseRequest($std);
             case self::CANCELA_NFSE_ENVIO :
                 return new CancelarNfseRequest($std);
+            case self::CANCELA_NFSE_RESPOSTA :
+                return new CancelarNfseResponse($std);
             default:
                 return null;
         }

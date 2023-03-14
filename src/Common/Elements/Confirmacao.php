@@ -1,10 +1,12 @@
 <?php
 
+
 namespace Ativasolucoestecnologicas\Nfse\Common\Elements;
+
 
 use NFePHP\Common\DOMImproved;
 
-class NfseCancelamento
+class Confirmacao
 {
     /**
      * @param \stdClass $std
@@ -12,13 +14,14 @@ class NfseCancelamento
      * @param \DOMNode $parent
      * @param string $element
      */
-    public static function mount($std, $dom, $parent, $element = 'NfseCancelamento')
+    public static function mount($std, $dom, $parent, $element = 'Confirmacao')
     {
         $node = $dom->createElement($element);
 
-        $node->setAttribute('versao', $std->versao);
+        $node->setAttribute('Id', $std->id);
 
-        Confirmacao::mount($std->confirmacao, $dom, $node);
+        PedidoCancelamento::mount($std->pedido, $dom, $node, 'Pedido');
+        $dom->addChild($node, "DataHora", $std->datahora, false);
 
         $parent->appendChild($node);
         $dom->appendChild($parent);
