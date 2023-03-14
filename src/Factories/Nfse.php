@@ -3,7 +3,6 @@
 namespace Ativasolucoestecnologicas\Nfse\Factories;
 
 use Ativasolucoestecnologicas\Nfse\Common\Base;
-use Ativasolucoestecnologicas\Nfse\Common\Elements\Cabecalho;
 use Ativasolucoestecnologicas\Nfse\Common\Elements\CompNfse;
 use DOMNode;
 use stdClass;

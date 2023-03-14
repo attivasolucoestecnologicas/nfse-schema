@@ -12,10 +12,11 @@ class InfDeclaracaoPrestacaoServico
      * @param stdClass $std
      * @param DOMImproved $dom
      * @param $parent
+     * @param string $element
      */
-    public static function mount($std, $dom, $parent)
+    public static function mount($std, $dom, $parent, string $element = 'InfDeclaracaoPrestacaoServico')
     {
-        $node = $dom->createElement('InfDeclaracaoPrestacaoServico');
+        $node = $dom->createElement($element);
 
         $node->setAttribute('Id', $std->id);
 

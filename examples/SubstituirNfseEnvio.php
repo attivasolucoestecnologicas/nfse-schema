@@ -1,24 +1,26 @@
 <?php
 
-use Ativasolucoestecnologicas\Nfse\Rps;
+use Ativasolucoestecnologicas\Nfse\SubstituirNfseEnvio;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$std = new stdClass;
-$std->EnviarLoteRpsEnvio = new stdClass();
-$std->EnviarLoteRpsEnvio->Loterps = new stdClass();
-$std->EnviarLoteRpsEnvio->Loterps->NumeroLote = '123456789012345';
-$std->EnviarLoteRpsEnvio->Loterps->CpfCnpj = '12345678901234';
-$std->EnviarLoteRpsEnvio->Loterps->InscricaoMunicipal = '123456789';
-$std->EnviarLoteRpsEnvio->Loterps->QuantidadeRps = 2;
-$std->EnviarLoteRpsEnvio->Loterps->Id = '001';
-$std->EnviarLoteRpsEnvio->Loterps->versao = '2.03';
+$std = new stdClass();
 
-$std->EnviarLoteRpsEnvio->Loterps->ListaRps = new \stdClass();
+$std->substituicaonfse = new stdClass();
+$std->substituicaonfse->Id = '2.03';
 
-$std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps = (object)[];
+$std->substituicaonfse->pedido = new stdClass();
+$std->substituicaonfse->pedido->infpedidocancelamento = new stdClass();
+$std->substituicaonfse->pedido->infpedidocancelamento->Id = '001';
+$std->substituicaonfse->pedido->infpedidocancelamento->CodigoCancelamento = '1';
+$std->substituicaonfse->pedido->infpedidocancelamento->IdentificacaoNfse = new stdClass();
+$std->substituicaonfse->pedido->infpedidocancelamento->IdentificacaoNfse->numero = '121234';
+$std->substituicaonfse->pedido->infpedidocancelamento->IdentificacaoNfse->cpfcnpj = '12345678901234';
+$std->substituicaonfse->pedido->infpedidocancelamento->IdentificacaoNfse->inscricaomunicipal = '12345678';
+$std->substituicaonfse->pedido->infpedidocancelamento->IdentificacaoNfse->codigomunicipio = '1234567';
+
 $infDeclaracaoPrestacaoServico = new stdClass();
 $infDeclaracaoPrestacaoServico->Rps = new stdClass();
 $infDeclaracaoPrestacaoServico->Rps->DataEmissao = '2023-03-08';
@@ -98,12 +100,8 @@ $infDeclaracaoPrestacaoServico->OptanteSimplesNacional = 1; // 1 - SIM | 2 - NÃ
 $infDeclaracaoPrestacaoServico->IncentivoFiscal = 2;  // 1 - SIM | 2 - NÃO - OK
 $infDeclaracaoPrestacaoServico->Id = '001'; // OK
 
-$std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{1} = $infDeclaracaoPrestacaoServico;
-// $std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{2} = $infDeclaracaoPrestacaoServico;
-// $std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{3} = $infDeclaracaoPrestacaoServico;
-// $std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{4} = $infDeclaracaoPrestacaoServico;
+$std->substituicaonfse->rps = $infDeclaracaoPrestacaoServico;
 
 header("Content-type: text/xml");
-Rps::save($std, 'examples/xml');
-//$rps = Rps::render($std);
-//echo $rps;
+$class = new SubstituirNfseEnvio();
+$class->save($std, 'examples/xml', 'SubstituirNfseEnvio');

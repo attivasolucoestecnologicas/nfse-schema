@@ -3,9 +3,9 @@
 namespace Ativasolucoestecnologicas\Nfse\Factories\Request;
 
 use Ativasolucoestecnologicas\Nfse\Common\Base;
-use Ativasolucoestecnologicas\Nfse\Common\Elements\EnviarLoteRpsEnvio;
+use Ativasolucoestecnologicas\Nfse\Common\Elements\SubstituirNfseEnvio;
 
-class EnviarLoteRps extends Base
+class SubstituirNfse extends Base
 {
     public function __construct(\stdClass $std)
     {
@@ -15,6 +15,6 @@ class EnviarLoteRps extends Base
 
     private function mount()
     {
-        EnviarLoteRpsEnvio::mount($this->std, $this->dom);
+        SubstituirNfseEnvio::mount($this->std, $this->dom);
     }
 }

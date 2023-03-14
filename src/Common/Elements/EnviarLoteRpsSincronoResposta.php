@@ -23,11 +23,17 @@ class EnviarLoteRpsSincronoResposta
         $dom->addChild($node, "DataRecebimento", $std->datarecebimento, true);
         $dom->addChild($node, "Protocolo", $std->protocolo, true);
 
-        ListaNfse::mount($std->listanfse, $dom, $node);
+        if ($std->listanfse ?? null) {
+            ListaNfse::mount($std->listanfse, $dom, $node);
+        }
 
-        ListaMensagemRetorno::mount($std->listamensagemretorno, $dom, $node);
+        if ($std->listamensagemretorno ?? null) {
+            ListaMensagemRetorno::mount($std->listamensagemretorno, $dom, $node);
+        }
 
-        ListaMensagemRetornoLote::mount($std->listamensagemretornolote, $dom, $node);
+        if ($std->listamensagemretornolote ?? null) {
+            ListaMensagemRetornoLote::mount($std->listamensagemretornolote, $dom, $node);
+        }
 
         $dom->appendChild($node);
     }

@@ -3,9 +3,9 @@
 namespace Ativasolucoestecnologicas\Nfse\Factories\Request;
 
 use Ativasolucoestecnologicas\Nfse\Common\Base;
-use Ativasolucoestecnologicas\Nfse\Common\Elements\EnviarLoteRpsEnvio;
+use Ativasolucoestecnologicas\Nfse\Common\Elements\CancelarNfseEnvio;
 
-class EnviarLoteRps extends Base
+class CancelarNfse extends Base
 {
     public function __construct(\stdClass $std)
     {
@@ -13,8 +13,9 @@ class EnviarLoteRps extends Base
         $this->mount();
     }
 
+
     private function mount()
     {
-        EnviarLoteRpsEnvio::mount($this->std, $this->dom);
+        CancelarNfseEnvio::mount($this->std, $this->dom);
     }
 }

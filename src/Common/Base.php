@@ -36,9 +36,10 @@ abstract class Base
         return $this->dom->saveXML();
     }
 
-    public function save($path = '/tmp')
+    public function save($path = '/tmp', $name = null)
     {
-        $filePath = Helpers::save($this, $path);
+        $dir = __DIR__ . "/../../{$path}";
+        $filePath = Helpers::save($this, $dir, $name);
         $result = $this->dom->save($filePath);
         if ($result !== false) {
             return true;

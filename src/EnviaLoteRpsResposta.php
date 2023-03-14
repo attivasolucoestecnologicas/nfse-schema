@@ -3,26 +3,12 @@
 namespace Ativasolucoestecnologicas\Nfse;
 
 use Ativasolucoestecnologicas\Nfse\Common\Factory;
-use Ativasolucoestecnologicas\Nfse\Helpers\Helpers;
-use stdClass;
+use Ativasolucoestecnologicas\Nfse\Common\Init;
 
-class EnviaLoteRpsResposta
+class EnviaLoteRpsResposta extends Init
 {
-    public static function render(stdClass $std = null)
+    public function __construct()
     {
-        return Factory::render(self::init($std), Factory::ENVIO_LOTE_RPS_RESPOSTA)->toXml();
-    }
-
-    public static function save(stdClass $std = null, $path = '/')
-    {
-        return Factory::render(self::init($std), Factory::ENVIO_LOTE_RPS_RESPOSTA)->save($path);
-    }
-
-    private static function init(stdClass $std = null)
-    {
-        if (!empty($std)) {
-            return Helpers::propertiesToLower($std);
-        }
-        return null;
+        parent::__construct(Factory::ENVIO_LOTE_RPS_RESPOSTA);
     }
 }

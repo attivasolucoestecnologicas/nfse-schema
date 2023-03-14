@@ -22,6 +22,10 @@ class ListaNfse
             CompNfse::mount($item, $dom, $node);
         }
 
+        if ($std->listamensagemalertaretorno) {
+            ListaMensagemAlertaRetorno::mount($std->listamensagemalertaretorno, $dom, $node);
+        }
+
         $parent->appendChild($node);
         $dom->appendChild($parent);
     }

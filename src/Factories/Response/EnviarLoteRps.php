@@ -2,8 +2,8 @@
 
 namespace Ativasolucoestecnologicas\Nfse\Factories\Response;
 
-use Ativasolucoestecnologicas\Nfse\Common\Elements\EnviarLoteRpsResposta as ElementEnviarLoteRpsResposta;
 use Ativasolucoestecnologicas\Nfse\Common\Base;
+use Ativasolucoestecnologicas\Nfse\Common\Elements\EnviarLoteRpsResposta as ElementEnviarLoteRpsResposta;
 use DOMNode;
 use stdClass;
 
