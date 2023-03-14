@@ -17,10 +17,10 @@ class GerarNfseResposta
     {
         $node = $dom->createElement($element);
 
-        if($std->listanfse) {
+        if($std->listanfse ?? null) {
             ListaNfse::mount($std->listanfse, $dom, $node);
         }
-        if($std->listamensagemretorno) {
+        if($std->listamensagemretorno ?? null) {
             ListaMensagemRetorno::mount($std->listamensagemretorno, $dom, $node);
         }
 
