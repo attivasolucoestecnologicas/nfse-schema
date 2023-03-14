@@ -21,6 +21,9 @@ class ListaNfse
         foreach ($std->listanfse as $item) {
             CompNfse::mount($item, $dom, $node);
         }
+        if ($std->listamensagemalertaretorno) {
+            ListaMensagemAlertaRetorno::mount($std->listamensagemalertaretorno, $dom, $node);
+        }
 
         $parent->appendChild($node);
         $dom->appendChild($parent);

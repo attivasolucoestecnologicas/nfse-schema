@@ -5,9 +5,10 @@ namespace Ativasolucoestecnologicas\Nfse;
 
 
 use Ativasolucoestecnologicas\Nfse\Common\Factory;
+use Ativasolucoestecnologicas\Nfse\Common\Init;
 use Ativasolucoestecnologicas\Nfse\Helpers\Helpers;
 
-class EnviarLoteRpsEnvio
+class EnviarLoteRpsEnvio extends Init
 {
     public static function render(\stdClass $std = null)
     {
@@ -17,13 +18,5 @@ class EnviarLoteRpsEnvio
     public static function save(\stdClass $std = null, $path = '/')
     {
         return Factory::render(self::init($std), Factory::ENVIO_LOTE_RPS_ENVIO)->save($path);
-    }
-
-    private static function init(\stdClass $std = null)
-    {
-        if (!empty($std)) {
-            return Helpers::propertiesToLower($std);
-        }
-        return null;
     }
 }
