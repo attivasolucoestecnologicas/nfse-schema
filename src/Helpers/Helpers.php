@@ -33,13 +33,15 @@ class Helpers
         return null;
     }
 
-    public static function save($file, $path = '/tmp')
+    public static function save($file, $path = '/tmp', $name = null)
     {
         if (!is_dir($path)) {
             mkdir($path, 0777, true);
         }
 
-        $name = (new \ReflectionClass($file))->getShortName();
+        if (is_null($name)) {
+            $name = (new \ReflectionClass($file))->getShortName();
+        }
 
         return "{$path}/{$name}.xml";
     }

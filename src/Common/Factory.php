@@ -22,7 +22,7 @@ class Factory
     const GERA_NFSE_ENVIO = 'GerarNfseEnvio';
     const GERA_NFSE_RESPOSTA = 'GerarNfseResposta';
 
-    public static function render($std, $type)
+    public function render($std, $type)
     {
         switch ($type) {
             case self::NFSE;
@@ -42,7 +42,7 @@ class Factory
             case self::GERA_NFSE_RESPOSTA :
                 return new GerarNfseResponse($std);
             default:
-                return '';
+                return null;
         }
     }
 }

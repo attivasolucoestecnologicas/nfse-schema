@@ -7,13 +7,8 @@ use Ativasolucoestecnologicas\Nfse\Common\Init;
 
 class GerarNfseResposta extends Init
 {
-    public static function render(\stdClass $std = null)
+    public function __construct()
     {
-        return Factory::render(self::init($std), Factory::GERA_NFSE_RESPOSTA)->toXml();
-    }
-
-    public static function save(\stdClass $std = null, $path = '/')
-    {
-        return Factory::render(self::init($std), Factory::GERA_NFSE_RESPOSTA)->save($path);
+        parent::__construct(Factory::GERA_NFSE_RESPOSTA);
     }
 }

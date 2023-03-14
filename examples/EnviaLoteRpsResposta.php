@@ -22,4 +22,5 @@ $std->ListaMensagemRetorno->MensagemRetorno->{1} = $mensagemRetorno;
 $std->ListaMensagemRetorno->MensagemRetorno->{2} = $mensagemRetorno;
 
 header("Content-type: text/xml");
-EnviaLoteRpsResposta::save($std, 'examples/xml');
+$class = new EnviaLoteRpsResposta;
+$class->save($std, 'examples/xml', 'EnviaLoteRpsResposta');

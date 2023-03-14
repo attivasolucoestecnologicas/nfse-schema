@@ -3,26 +3,13 @@
 namespace Ativasolucoestecnologicas\Nfse;
 
 use Ativasolucoestecnologicas\Nfse\Common\Factory;
-use Ativasolucoestecnologicas\Nfse\Helpers\Helpers;
+use Ativasolucoestecnologicas\Nfse\Common\Init;
 use stdClass;
 
-class Rps
+class Rps extends Init
 {
-    public static function render(stdClass $std = null)
+    public function __construct()
     {
-        return Factory::render(self::init($std), Factory::RPS)->toXml();
-    }
-
-    public static function save(stdClass $std = null, $path = '/')
-    {
-        return Factory::render(self::init($std), Factory::RPS)->save($path);
-    }
-
-    private static function init(stdClass $std = null)
-    {
-        if (!empty($std)) {
-            return Helpers::propertiesToLower($std);
-        }
-        return null;
+        parent::__construct(Factory::RPS);
     }
 }
