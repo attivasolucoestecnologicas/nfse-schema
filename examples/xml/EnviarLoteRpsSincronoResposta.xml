@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EnviarLoteRpsSincronoResposta xmlns="https://wjdev.net.br/abrasf/v203/nfse.xsd">
+    <NumeroLote>123456789012345</NumeroLote>
+    <DataRecebimento>2023-03-14T16:00:14</DataRecebimento>
+    <Protocolo>123456</Protocolo>
+    <ListaMensagemRetorno>
+        <MensagemRetorno>
+            <Codigo>1234</Codigo>
+            <Mensagem>Mensagem Teste</Mensagem>
+            <Correcao>121212</Correcao>
+        </MensagemRetorno>
+    </ListaMensagemRetorno>
+</EnviarLoteRpsSincronoResposta>
