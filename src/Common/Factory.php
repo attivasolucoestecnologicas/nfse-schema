@@ -3,12 +3,12 @@
 namespace Ativasolucoestecnologicas\Nfse\Common;
 
 use Ativasolucoestecnologicas\Nfse\Factories\Nfse;
+use Ativasolucoestecnologicas\Nfse\Factories\Request\CancelarNfse as CancelarNfseRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\EnviarLoteRps as EnviarLoteRpsRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\EnviarLoteRpsSincrono as EnviarLoteRpsSincronoRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\GerarNfse as GerarNfseRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\EnviarLoteRps as EnviarLoteRpsResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\EnviarLoteRpsSincrono as EnviarLoteRpsSincronoResponse;
-use Ativasolucoestecnologicas\Nfse\Factories\Response\GerarNfse as GerarNfseResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Rps;
 
 class Factory
@@ -21,6 +21,7 @@ class Factory
     const ENVIO_LOTE_RPS_SINCRONO_RESPOSTA = 'EnviarLoteRpsSincronoResposta';
     const GERA_NFSE_ENVIO = 'GerarNfseEnvio';
     const GERA_NFSE_RESPOSTA = 'GerarNfseResposta';
+    const CANCELA_NFSE_ENVIO = 'CancelarNfseEnvio';
 
     public function render($std, $type)
     {
@@ -39,8 +40,8 @@ class Factory
                 return new EnviarLoteRpsSincronoResponse($std);
             case self::GERA_NFSE_ENVIO :
                 return new GerarNfseRequest($std);
-            case self::GERA_NFSE_RESPOSTA :
-                return new GerarNfseResponse($std);
+            case self::CANCELA_NFSE_ENVIO :
+                return new CancelarNfseRequest($std);
             default:
                 return null;
         }
