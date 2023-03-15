@@ -11,6 +11,7 @@ use Ativasolucoestecnologicas\Nfse\Factories\Request\SubstituirNfse as Substitui
 use Ativasolucoestecnologicas\Nfse\Factories\Response\CancelarNfse as CancelarNfseResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\EnviarLoteRps as EnviarLoteRpsResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\EnviarLoteRpsSincrono as EnviarLoteRpsSincronoResponse;
+use Ativasolucoestecnologicas\Nfse\Factories\Response\SubstituirNfse as SubstituirNfseResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Rps;
 
 class Factory
@@ -51,6 +52,8 @@ class Factory
                 return new CancelarNfseResponse($std);
             case self::SUBSTITUIR_NFSE_ENVIO :
                 return new SubstituirNfseRequest($std);
+            case self::SUBSTITUIR_NFSE_RESPOSTA :
+                return new SubstituirNfseResponse($std);
             default:
                 return null;
         }

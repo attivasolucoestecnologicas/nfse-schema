@@ -4,7 +4,7 @@ namespace Ativasolucoestecnologicas\Nfse\Common\Elements;
 
 use NFePHP\Common\DOMImproved;
 
-class RetSubstituicao
+class NfseSubstituidora
 {
     /**
      * @param \stdClass $std
@@ -12,12 +12,11 @@ class RetSubstituicao
      * @param \DOMNode $parent
      * @param string $element
      */
-    public static function mount($std, $dom, $parent, $element = 'RetSubstituicao')
+    public static function mount($std, $dom, $parent, $element = 'NfseSubstituidora')
     {
         $node = $dom->createElement($element);
 
-        NfseSubstituida::mount($std->nfsesubstituida, $dom, $node);
-        NfseSubstituidora::mount($std->nfsesubstituidora, $dom, $node);
+        CompNfse::mount($std->compnfse, $dom, $node);
 
         $parent->appendChild($node);
         $dom->appendChild($parent);
