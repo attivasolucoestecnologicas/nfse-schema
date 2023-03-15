@@ -16,7 +16,7 @@ class ListaMensagemAlertaRetorno
     {
         $node = $dom->createElement($element);
 
-        foreach ($std->listamensagemalertaretorno as $item) {
+        foreach ($std->mensagemretorno as $item) {
             MensagemRetorno::mount($item, $dom, $node);
         }
 

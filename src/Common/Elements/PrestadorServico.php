@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Ativasolucoestecnologicas\Nfse\Common\Elements;
-
 
 use DOMNode;
 use NFePHP\Common\DOMImproved;
@@ -14,10 +12,11 @@ class PrestadorServico
      * @param stdClass $std
      * @param DOMImproved $dom
      * @param DomNode $parent
+     * @param string$element
      */
-    public static function mount($std, $dom, $parent)
+    public static function mount($std, $dom, $parent, $element = 'PrestadorServico')
     {
-        $node = $dom->createElement('PrestadorServico');
+        $node = $dom->createElement($element);
 
         IdentificacaoPrestador::mount($std->identificacaoprestador, $dom, $node);
         $dom->addChild($node, "RazaoSocial", $std->razaosocial, true);

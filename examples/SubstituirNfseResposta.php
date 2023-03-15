@@ -135,15 +135,16 @@ $std->retsubstituicao->nfsesubstituida->CompNfse->Nfse->InfNfse->DeclaracaoPrest
 $std->retsubstituicao->nfsesubstituida->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->IncentivoFiscal = 2;  // 1 - SIM | 2 - NÃO - OK
 $std->retsubstituicao->nfsesubstituida->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Id = '001'; // OK
 
-$std->retsubstituicao->nfsesubstituida->listamensagemalertaretorno = (object)[];
+$std->retsubstituicao->nfsesubstituida->listamensagemalertaretorno = new stdClass();
+$std->retsubstituicao->nfsesubstituida->listamensagemalertaretorno->mensagemRetorno = (object)[];
 
 $mensagemRetorno = new stdClass();
 $mensagemRetorno->Codigo = '001';
 $mensagemRetorno->Mensagem = '002';
 $mensagemRetorno->Correcao = '003';
 
-$std->retsubstituicao->nfsesubstituida->listamensagemalertaretorno->{1} = $mensagemRetorno;
-$std->retsubstituicao->nfsesubstituida->listamensagemalertaretorno->{2} = $mensagemRetorno;
+$std->retsubstituicao->nfsesubstituida->listamensagemalertaretorno->mensagemRetorno->{1} = $mensagemRetorno;
+$std->retsubstituicao->nfsesubstituida->listamensagemalertaretorno->mensagemRetorno->{2} = $mensagemRetorno;
 
 
 
