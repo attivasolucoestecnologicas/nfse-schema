@@ -5,12 +5,14 @@ namespace Ativasolucoestecnologicas\Nfse\Common;
 use Ativasolucoestecnologicas\Nfse\Factories\Nfse;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\CancelarNfse as CancelarNfseRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\ConsultaLoteRps as ConsultaLoteRpsRequest;
+use Ativasolucoestecnologicas\Nfse\Factories\Request\ConsultaNfseRps as ConsultaNfseRpsRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\EnviarLoteRps as EnviarLoteRpsRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\EnviarLoteRpsSincrono as EnviarLoteRpsSincronoRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\GerarNfse as GerarNfseRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\SubstituirNfse as SubstituirNfseRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\CancelarNfse as CancelarNfseResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\ConsultaLoteRps as ConsultaLoteRpsResponse;
+use Ativasolucoestecnologicas\Nfse\Factories\Response\ConsultaNfseRps as ConsultaNfseRpsResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\EnviarLoteRps as EnviarLoteRpsResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\EnviarLoteRpsSincrono as EnviarLoteRpsSincronoResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\SubstituirNfse as SubstituirNfseResponse;
@@ -32,6 +34,8 @@ class Factory
     const SUBSTITUIR_NFSE_RESPOSTA = 'SubstituirNfseResponse';
     const CONSULTA_LOTE_RPS_ENVIO = 'ConsultarLoteRpsEnvio';
     const CONSULTA_LOTE_RPS_RESPOSTA = 'ConsultarLoteRpsResposta';
+    const CONSULTA_NFSE_RPS_ENVIO = 'ConsultarNfseRpsEnvio';
+    const CONSULTA_NFSE_RPS_RESPOSTA = 'ConsultarNfseRpsResposta';
 
     public function render($std, $type)
     {
@@ -62,6 +66,10 @@ class Factory
                 return new ConsultaLoteRpsRequest($std);
             case self::CONSULTA_LOTE_RPS_RESPOSTA :
                 return new ConsultaLoteRpsResponse($std);
+            case self::CONSULTA_NFSE_RPS_ENVIO :
+                return new ConsultaNfseRpsRequest($std);
+            case self::CONSULTA_NFSE_RPS_RESPOSTA :
+                return new ConsultaNfseRpsResponse($std);
             default:
                 return null;
         }
