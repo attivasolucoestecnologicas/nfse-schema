@@ -5,6 +5,7 @@ namespace Ativasolucoestecnologicas\Nfse\Common;
 use Ativasolucoestecnologicas\Nfse\Factories\Nfse;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\CancelarNfse as CancelarNfseRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\ConsultaLoteRps as ConsultaLoteRpsRequest;
+use Ativasolucoestecnologicas\Nfse\Factories\Request\ConsultaNfseFaixa as ConsultaNfseFaixaRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\ConsultaNfseRps as ConsultaNfseRpsRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\ConsultaNfseServicoPrestado as ConsultaNfseServicoPrestadoRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\ConsultaNfseServicoTomado as ConsultaNfseServicoTomadoRequest;
@@ -14,6 +15,7 @@ use Ativasolucoestecnologicas\Nfse\Factories\Request\GerarNfse as GerarNfseReque
 use Ativasolucoestecnologicas\Nfse\Factories\Request\SubstituirNfse as SubstituirNfseRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\CancelarNfse as CancelarNfseResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\ConsultaLoteRps as ConsultaLoteRpsResponse;
+use Ativasolucoestecnologicas\Nfse\Factories\Response\ConsultaNfseFaixa as ConsultaNfseFaixaResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\ConsultaNfseRps as ConsultaNfseRpsResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\ConsultaNfseServicoPrestado as ConsultaNfseServicoPrestadoResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\ConsultaNfseServicoTomado as ConsultaNfseServicoTomadoResponse;
@@ -44,6 +46,8 @@ class Factory
     const CONSULTA_NFSE_SERVICO_PRESTADO_RESPOSTA = 'ConsultaNfseServicoPrestadoResponse';
     const CONSULTA_NFSE_SERVICO_TOMADO_ENVIO = 'ConsultaNfseServicoTomadoRequest';
     const CONSULTA_NFSE_SERVICO_TOMADO_RESPOSTA = 'ConsultaNfseServicoTomadoResponse';
+    const CONSULTA_NFSE_FAIXA_ENVIO = 'ConsultaNfseFaixaRequest';
+    const CONSULTA_NFSE_FAIXA_RESPOSTA = 'ConsultaNfseFaixaResponse';
 
     public function render($std, $type)
     {
@@ -86,6 +90,10 @@ class Factory
                 return new ConsultaNfseServicoTomadoRequest($std);
             case self::CONSULTA_NFSE_SERVICO_TOMADO_RESPOSTA :
                 return new ConsultaNfseServicoTomadoResponse($std);
+            case self::CONSULTA_NFSE_FAIXA_ENVIO :
+                return new ConsultaNfseFaixaRequest($std);
+            case self::CONSULTA_NFSE_FAIXA_RESPOSTA :
+                return new ConsultaNfseFaixaResponse($std);
             default:
                 return null;
         }
