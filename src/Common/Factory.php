@@ -7,6 +7,7 @@ use Ativasolucoestecnologicas\Nfse\Factories\Request\CancelarNfse as CancelarNfs
 use Ativasolucoestecnologicas\Nfse\Factories\Request\ConsultaLoteRps as ConsultaLoteRpsRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\ConsultaNfseRps as ConsultaNfseRpsRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\ConsultaNfseServicoPrestado as ConsultaNfseServicoPrestadoRequest;
+use Ativasolucoestecnologicas\Nfse\Factories\Request\ConsultaNfseServicoTomado as ConsultaNfseServicoTomadoRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\EnviarLoteRps as EnviarLoteRpsRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\EnviarLoteRpsSincrono as EnviarLoteRpsSincronoRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Request\GerarNfse as GerarNfseRequest;
@@ -15,6 +16,7 @@ use Ativasolucoestecnologicas\Nfse\Factories\Response\CancelarNfse as CancelarNf
 use Ativasolucoestecnologicas\Nfse\Factories\Response\ConsultaLoteRps as ConsultaLoteRpsResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\ConsultaNfseRps as ConsultaNfseRpsResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\ConsultaNfseServicoPrestado as ConsultaNfseServicoPrestadoResponse;
+use Ativasolucoestecnologicas\Nfse\Factories\Response\ConsultaNfseServicoTomado as ConsultaNfseServicoTomadoResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\EnviarLoteRps as EnviarLoteRpsResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\EnviarLoteRpsSincrono as EnviarLoteRpsSincronoResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Response\SubstituirNfse as SubstituirNfseResponse;
@@ -40,6 +42,8 @@ class Factory
     const CONSULTA_NFSE_RPS_RESPOSTA = 'ConsultarNfseRpsResposta';
     const CONSULTA_NFSE_SERVICO_PRESTADO_ENVIO = 'ConsultaNfseServicoPrestadoRequest';
     const CONSULTA_NFSE_SERVICO_PRESTADO_RESPOSTA = 'ConsultaNfseServicoPrestadoResponse';
+    const CONSULTA_NFSE_SERVICO_TOMADO_ENVIO = 'ConsultaNfseServicoTomadoRequest';
+    const CONSULTA_NFSE_SERVICO_TOMADO_RESPOSTA = 'ConsultaNfseServicoTomadoResponse';
 
     public function render($std, $type)
     {
@@ -78,6 +82,10 @@ class Factory
                 return new ConsultaNfseServicoPrestadoRequest($std);
             case self::CONSULTA_NFSE_SERVICO_PRESTADO_RESPOSTA :
                 return new ConsultaNfseServicoPrestadoResponse($std);
+            case self::CONSULTA_NFSE_SERVICO_TOMADO_ENVIO :
+                return new ConsultaNfseServicoTomadoRequest($std);
+            case self::CONSULTA_NFSE_SERVICO_TOMADO_RESPOSTA :
+                return new ConsultaNfseServicoTomadoResponse($std);
             default:
                 return null;
         }
