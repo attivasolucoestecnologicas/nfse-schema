@@ -2,8 +2,7 @@
 
 <xsd:schema elementFormDefault="qualified"
 	targetNamespace="https://wjdev.net.br/abrasf/schemes/servico_cancelar_nfse_envio" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:tns="https://wjdev.net.br/abrasf/schemes/servico_cancelar_nfse_envio" xmlns:tipos="https://wjdev.net.br/abrasf/schemes/tipos">
-	<xsd:import schemaLocation="xmldsig-core-schema_v02.xsd"
-		namespace="http://www.w3.org/2000/09/xmldsig#"></xsd:import>
+	<xsd:import schemaLocation="xmldsig-core-schema_v02.xsd" namespace="http://www.w3.org/2000/09/xmldsig#"></xsd:import>
 	<xsd:import schemaLocation="tipos_v02.xsd" namespace="https://wjdev.net.br/abrasf/schemes/tipos"></xsd:import>
 	<xsd:element name="CancelarNfseEnvio">
 		<xsd:complexType>

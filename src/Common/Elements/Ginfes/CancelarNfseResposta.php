@@ -1,7 +1,8 @@
 <?php
 
-namespace Ativasolucoestecnologicas\Nfse\Common\Elements;
+namespace Ativasolucoestecnologicas\Nfse\Common\Elements\Ginfes;
 
+use Ativasolucoestecnologicas\Nfse\Common\Elements\ListaMensagemRetorno;
 use NFePHP\Common\DOMImproved;
 
 class CancelarNfseResposta
@@ -15,10 +16,10 @@ class CancelarNfseResposta
     {
         $node = $dom->createElement($element);
 
-        $node->setAttribute('xmlns', "https://wjdev.net.br/abrasf/v203/nfse.xsd");
+        $node->setAttribute('xmlns', "https://wjdev.net.br/abrasf/schemes/servico_cancelar_nfse_resposta_v03.xsd");
 
-        if ($std->retcancelamento ?? null) {
-            RetCancelamento::mount($std->retcancelamento, $dom, $node);
+        if ($std->cancelamento ?? null) {
+            Cancelamento::mount($std->cancelamento, $dom, $node);
         }
 
         if ($std->listamensagemretorno ?? null) {
