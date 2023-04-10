@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Ativasolucoestecnologicas\Nfse\Common\Elements;
-
 
 use DOMNode;
 use NFePHP\Common\DOMImproved;
@@ -25,7 +23,9 @@ class Endereco
         $dom->addChild($node, "Bairro", $std->bairro, true);
         $dom->addChild($node, "CodigoMunicipio", $std->codigomunicipio, true);
         $dom->addChild($node, "Uf", $std->uf, true);
-        $dom->addChild($node, "CodigoPais", $std->codigopais, true);
+        if ($std->codigopais ?? null) {
+            $dom->addChild($node, "CodigoPais", $std->codigopais, true);
+        }
         $dom->addChild($node, "Cep", $std->cep, true);
 
         $parent->appendChild($node);

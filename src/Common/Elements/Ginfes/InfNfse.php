@@ -2,10 +2,10 @@
 
 namespace Ativasolucoestecnologicas\Nfse\Common\Elements\Ginfes;
 
-use Ativasolucoestecnologicas\Nfse\Common\Elements\DeclaracaoPrestacaoServico;
+use Ativasolucoestecnologicas\Nfse\Common\Elements\ConstrucaoCivil;
+use Ativasolucoestecnologicas\Nfse\Common\Elements\IdentificacaoRps;
 use Ativasolucoestecnologicas\Nfse\Common\Elements\OrgaoGerador;
-use Ativasolucoestecnologicas\Nfse\Common\Elements\PrestadorServico;
-use Ativasolucoestecnologicas\Nfse\Common\Elements\ValoresNfse;
+use Ativasolucoestecnologicas\Nfse\Common\Elements\TomadorServico;
 use NFePHP\Common\DOMImproved;
 
 class InfNfse
@@ -22,51 +22,36 @@ class InfNfse
 
         $node->setAttribute('Id', $std->id);
 
-        $dom->addChild(
-            $node,
-            "Numero",
-            $std->numero,
-            true
-        );
-        $dom->addChild(
-            $node,
-            "CodigoVerificacao",
-            $std->codigoverificacao,
-            true
-        );
-        $dom->addChild(
-            $node,
-            "DataEmissao",
-            $std->dataemissao,
-            true
-        );
-        $dom->addChild(
-            $node,
-            "NfseSubstituida",
-            $std->nfsesubstituida,
-            false
-        );
-        $dom->addChild(
-            $node,
-            "OutrasInformacoes",
-            $std->outrasinformacoes,
-            false
-        );
+        $dom->addChild($node, "Numero", $std->numero, true);
+        $dom->addChild($node, "CodigoVerificacao", $std->codigoverificacao, true);
+        $dom->addChild($node, "DataEmissao", $std->dataemissao, true);
 
-        ValoresNfse::mount($std->valoresnfse, $dom, $node);
+        if ($std->identificacaorps) {
+            IdentificacaoRps::mount($std->identificacaorps, $dom, $node); // Montar
+        }
 
-        $dom->addChild(
-            $node,
-            "ValorCredito",
-            $std->valorcredito,
-            false
-        );
+        $dom->addChild($node, "DataEmissaoRps", $std->dataemissaorps, false);
+        $dom->addChild($node, "NaturezaOperacao", $std->naturezaoperacao, true);
+        $dom->addChild($node, "RegimeEspecialTributacao", $std->regimeespecialtributacao, false);
+        $dom->addChild($node, "OptanteSimplesNacional", $std->optantesimplesnacional, true);
+        $dom->addChild($node, "IncentivadorCultural", $std->incentivadorcultural, true);
+        $dom->addChild($node, "Competencia", $std->competencia, true);
+        $dom->addChild($node, "NfseSubstituida", $std->nfsesubstituida, false);
+        $dom->addChild($node, "OutrasInformacoes", $std->outrasinformacoes, false);
+
+        DadosServico::mount($std->servico, $dom, $node, 'Servico');
+
+        $dom->addChild($node, "ValorCredito", $std->valorcredito, false);
 
         PrestadorServico::mount($std->prestadorservico, $dom, $node);
 
+        TomadorServico::mount($std->tomadorservico, $dom, $node);
+
+        IntermediarioServico::mount($std->intermediarioservico, $dom, $node);
+
         OrgaoGerador::mount($std->orgaogerador, $dom, $node);
 
-        DeclaracaoPrestacaoServico::mount($std->declaracaoprestacaoservico, $dom, $node);
+        ConstrucaoCivil::mount($std->construcaocivil, $dom, $node);
 
         $parent->appendChild($node);
         $dom->appendChild($parent);

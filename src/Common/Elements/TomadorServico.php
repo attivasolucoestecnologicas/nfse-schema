@@ -17,7 +17,9 @@ class TomadorServico
         $node = $dom->createElement($element);
 
         IdentificacaoPrestador::mount($std->identificacaotomador, $dom, $node, 'IdentificacaoTomador');
-        $dom->addChild($node, "NifTomador", $std->niftomador, false);
+        if($std->niftomador ?? null) {
+            $dom->addChild($node, "NifTomador", $std->niftomador, false);
+        }
         $dom->addChild($node, "RazaoSocial", $std->razaosocial, false);
         Endereco::mount($std->endereco, $dom, $node);
         Contato::mount($std->contato, $dom, $node);
