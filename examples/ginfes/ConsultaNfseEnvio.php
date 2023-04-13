@@ -31,4 +31,4 @@ $std->IntermediarioServico->InscricaoMunicipal = '9876543210';
 
 header("Content-type: text/xml");
 $class = new ConsultaNfseEnvio();
-$class->save($std, 'examples/ginfes/xml', 'ConsultaNfseEnvio');
+$class->save($std, 'examples/xml/ginfes', 'ConsultaNfseEnvio');

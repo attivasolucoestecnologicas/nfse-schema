@@ -26,4 +26,4 @@ $std->cancelamento->confirmacao->InfConfirmacaoCancelamento->DataHora = date('Y-
 
 header("Content-type: text/xml");
 $class = new CancelarNfseResposta();
-$class->save($std, 'examples/ginfes/xml', 'CancelarNfseResposta');
+$class->save($std, 'examples/xml/ginfes', 'CancelarNfseResposta');

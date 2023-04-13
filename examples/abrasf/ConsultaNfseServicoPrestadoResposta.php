@@ -1,15 +1,14 @@
 <?php
 
-use Ativasolucoestecnologicas\Nfse\ConsultaLoteRpsResposta;
+use Ativasolucoestecnologicas\Nfse\ConsultaNfseServicoPrestadoResposta;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 $std = new stdClass();
 
-$std->Situacao = '1';
-
+$std->ProximaPagina = '1';
 $std->ListaNfse = (object)[];
 
 $compNfse = new stdClass();
@@ -139,26 +138,6 @@ $compNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Id = '001'; // OK
 $std->ListaNfse->{1} = $compNfse;
 $std->ListaNfse->{2} = $compNfse;
 
-$std->listamensagemalertaretorno = new stdClass();
-$std->listamensagemalertaretorno->mensagemRetorno = (object)[];
-
-$mensagemRetorno = new stdClass();
-$mensagemRetorno->Codigo = '001';
-$mensagemRetorno->Mensagem = '002';
-$mensagemRetorno->Correcao = '003';
-
-$std->listamensagemalertaretorno->mensagemRetorno->{1} = $mensagemRetorno;
-$std->listamensagemalertaretorno->mensagemRetorno->{2} = $mensagemRetorno;
-
-//$std->listamensagemretorno = new stdClass();
-//$std->listamensagemretorno->mensagemretorno = (object)[];
-//$mensagemRetorno = new stdClass();
-//$mensagemRetorno->Codigo = '1234';
-//$mensagemRetorno->Mensagem = 'Mensagem Teste';
-//$mensagemRetorno->Correcao = '121212';
-//
-//$std->listamensagemretorno->mensagemretorno->{1} = $mensagemRetorno;
-
 header("Content-type: text/xml");
-$class = new ConsultaLoteRpsResposta();
-$class->save($std, 'examples/xml', 'ConsultaLoteRpsResposta');
+$class = new ConsultaNfseServicoPrestadoResposta();
+$class->save($std, 'examples/xml/abrasf', 'ConsultaNfseServicoPrestadoResposta');

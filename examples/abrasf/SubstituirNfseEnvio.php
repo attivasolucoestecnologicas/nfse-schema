@@ -4,7 +4,7 @@ use Ativasolucoestecnologicas\Nfse\SubstituirNfseEnvio;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 $std = new stdClass();
 
@@ -104,4 +104,4 @@ $std->substituicaonfse->rps = $infDeclaracaoPrestacaoServico;
 
 header("Content-type: text/xml");
 $class = new SubstituirNfseEnvio();
-$class->save($std, 'examples/xml', 'SubstituirNfseEnvio');
+$class->save($std, 'examples/xml/abrasf', 'SubstituirNfseEnvio');

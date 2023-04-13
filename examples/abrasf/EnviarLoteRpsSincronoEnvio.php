@@ -1,13 +1,24 @@
 <?php
 
-use Ativasolucoestecnologicas\Nfse\GerarNfseEnvio;
+use Ativasolucoestecnologicas\Nfse\EnviarLoteRpsSincronoEnvio;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 $std = new stdClass();
+$std->EnviarLoteRpsEnvio = new stdClass();
+$std->EnviarLoteRpsEnvio->Loterps = new stdClass();
+$std->EnviarLoteRpsEnvio->Loterps->NumeroLote = '123456789012345';
+$std->EnviarLoteRpsEnvio->Loterps->CpfCnpj = '12345678901234';
+$std->EnviarLoteRpsEnvio->Loterps->InscricaoMunicipal = '123456789';
+$std->EnviarLoteRpsEnvio->Loterps->QuantidadeRps = 2;
+$std->EnviarLoteRpsEnvio->Loterps->Id = '001';
+$std->EnviarLoteRpsEnvio->Loterps->versao = '2.03';
 
+$std->EnviarLoteRpsEnvio->Loterps->ListaRps = new \stdClass();
+
+$std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps = (object)[];
 $infDeclaracaoPrestacaoServico = new stdClass();
 $infDeclaracaoPrestacaoServico->Rps = new stdClass();
 $infDeclaracaoPrestacaoServico->Rps->DataEmissao = '2023-03-08';
@@ -87,8 +98,8 @@ $infDeclaracaoPrestacaoServico->OptanteSimplesNacional = 1; // 1 - SIM | 2 - NÃ
 $infDeclaracaoPrestacaoServico->IncentivoFiscal = 2;  // 1 - SIM | 2 - NÃO - OK
 $infDeclaracaoPrestacaoServico->Id = '001'; // OK
 
-$std->rps = $infDeclaracaoPrestacaoServico;
+$std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{1} = $infDeclaracaoPrestacaoServico;
 
 header("Content-type: text/xml");
-$class = new GerarNfseEnvio();
-$class->save($std, 'examples/xml', 'GerarNfseEnvio');
+$class = new EnviarLoteRpsSincronoEnvio();
+$class->save($std, 'examples/xml/abrasf', 'EnviarLoteRpsSincronoEnvio');

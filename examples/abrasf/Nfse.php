@@ -4,7 +4,7 @@ use Ativasolucoestecnologicas\Nfse\Nfse;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 $std = new stdClass;
 $std->cabecalho = new stdClass();
@@ -138,6 +138,6 @@ $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->IncentivoFiscal = 2; 
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Id = '001'; // OK
 
 header("Content-type: text/xml");
-Nfse::save($std, 'examples/xml');
+Nfse::save($std, 'examples/xml/abrasf');
 //$nfse = Nfse::render($std);
 //echo $nfse;

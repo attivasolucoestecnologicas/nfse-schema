@@ -136,4 +136,4 @@ $std->ListaNfse->{1} = $compNfse;
 
 header("Content-type: text/xml");
 $class = new ConsultaNfseResposta();
-$class->save($std, 'examples/ginfes/xml', 'ConsultaNfseResposta');
+$class->save($std, 'examples/xml/ginfes', 'ConsultaNfseResposta');

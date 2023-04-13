@@ -4,7 +4,7 @@ use Ativasolucoestecnologicas\Nfse\SubstituirNfseResposta;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 $std = new stdClass();
 
@@ -277,4 +277,4 @@ $std->retsubstituicao->nfsesubstituidora->CompNfse->Nfse->InfNfse->DeclaracaoPre
 
 header("Content-type: text/xml");
 $class = new SubstituirNfseResposta();
-$class->save($std, 'examples/xml', 'SubstituirNfseResposta');
+$class->save($std, 'examples/xml/abrasf', 'SubstituirNfseResposta');

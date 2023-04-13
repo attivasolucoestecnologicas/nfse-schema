@@ -18,4 +18,4 @@ $std->pedido->infpedidocancelamento->IdentificacaoNfse->inscricaomunicipal = '12
 $std->pedido->infpedidocancelamento->IdentificacaoNfse->codigomunicipio = '1234567';
 header("Content-type: text/xml");
 $class = new CancelarNfseEnvio();
-$class->save($std, 'examples/ginfes/xml', 'CancelarNfseEnvio');
+$class->save($std, 'examples/xml/ginfes', 'CancelarNfseEnvio');

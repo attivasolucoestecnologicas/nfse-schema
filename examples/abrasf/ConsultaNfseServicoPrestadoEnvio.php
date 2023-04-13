@@ -1,10 +1,10 @@
 <?php
 
-use Ativasolucoestecnologicas\Nfse\ConsultaNfseServicoTomadoEnvio;
+use Ativasolucoestecnologicas\Nfse\ConsultaNfseServicoPrestadoEnvio;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 $std = new stdClass();
 
@@ -19,10 +19,6 @@ $std->PeriodoEmissao = new stdClass();
 $std->PeriodoEmissao->DataInicial = date('Y-m-d');
 $std->PeriodoEmissao->DataFinal = date('Y-m-d');
 
-$std->Prestador = new stdClass();
-$std->Prestador->CpfCnpj = '12345678901';
-$std->Prestador->InscricaoMunicipal = '123456789';
-
 $std->Tomador = new stdClass();
 $std->Tomador->CpfCnpj = '12345678901';
 $std->Tomador->InscricaoMunicipal = '123456789';
@@ -32,5 +28,5 @@ $std->Intermediario->CpfCnpj = '12345678901';
 $std->Intermediario->InscricaoMunicipal = '123456789';
 
 header("Content-type: text/xml");
-$class = new ConsultaNfseServicoTomadoEnvio();
-$class->save($std, 'examples/xml', 'ConsultaNfseServicoTomadoEnvio');
+$class = new ConsultaNfseServicoPrestadoEnvio();
+$class->save($std, 'examples/xml/abrasf', 'ConsultaNfseServicoPrestadoEnvio');

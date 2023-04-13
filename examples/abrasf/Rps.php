@@ -1,10 +1,10 @@
 <?php
 
-use Ativasolucoestecnologicas\Nfse\EnviarLoteRpsEnvio;
+use Ativasolucoestecnologicas\Nfse\Rps;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 $std = new stdClass;
 $std->EnviarLoteRpsEnvio = new stdClass();
@@ -104,5 +104,6 @@ $std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{1} = $infDeclaracaoPrestacaoS
 // $std->EnviarLoteRpsEnvio->Loterps->ListaRps->Rps->{4} = $infDeclaracaoPrestacaoServico;
 
 header("Content-type: text/xml");
-$class = new EnviarLoteRpsEnvio();
-$class->save($std, 'examples/xml', 'EnviarLoteRpsEnvio');
+Rps::save($std, 'examples/xml/abrasf');
+//$rps = Rps::render($std);
+//echo $rps;

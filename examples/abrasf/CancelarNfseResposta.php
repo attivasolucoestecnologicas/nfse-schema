@@ -4,7 +4,7 @@ use Ativasolucoestecnologicas\Nfse\CancelarNfseResposta;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 $std = new stdClass();
 
@@ -26,4 +26,4 @@ $std->retcancelamento->nfsecancelamento->confirmacao->pedido->infpedidocancelame
 
 header("Content-type: text/xml");
 $class = new CancelarNfseResposta();
-$class->save($std, 'examples/xml', 'CancelarNfseResposta');
+$class->save($std, 'examples/xml/abrasf', 'CancelarNfseResposta');

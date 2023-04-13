@@ -4,7 +4,7 @@ use Ativasolucoestecnologicas\Nfse\EnviarLoteRpsSincronoResposta;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 $std = new stdClass();
 $std->NumeroLote = '123456789012345';
@@ -23,4 +23,4 @@ $std->listamensagemretorno->mensagemretorno->{1} = $mensagemRetorno;
 
 header("Content-type: text/xml");
 $class = new EnviarLoteRpsSincronoResposta();
-$class->save($std, 'examples/xml', 'EnviarLoteRpsSincronoResposta');
+$class->save($std, 'examples/xml/abrasf', 'EnviarLoteRpsSincronoResposta');

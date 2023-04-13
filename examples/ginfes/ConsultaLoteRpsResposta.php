@@ -136,4 +136,4 @@ $std->ListaNfse->{1} = $compNfse;
 
 header("Content-type: text/xml");
 $class = new ConsultaLoteRpsResposta();
-$class->save($std, 'examples/ginfes/xml', 'ConsultaLoteRpsResposta');
+$class->save($std, 'examples/xml/ginfes', 'ConsultaLoteRpsResposta');

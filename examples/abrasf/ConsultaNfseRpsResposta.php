@@ -1,15 +1,12 @@
 <?php
 
-use Ativasolucoestecnologicas\Nfse\ConsultaNfseFaixaResposta;
+use Ativasolucoestecnologicas\Nfse\ConsultaNfseRpsResposta;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 $std = new stdClass();
-
-$std->ProximaPagina = '1';
-$std->ListaNfse = (object)[];
 
 $compNfse = new stdClass();
 $compNfse->Nfse = new stdClass();
@@ -135,9 +132,19 @@ $compNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->OptanteSimplesNacional = 1
 $compNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->IncentivoFiscal = 2;  // 1 - SIM | 2 - NÃO - OK
 $compNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Id = '001'; // OK
 
-$std->ListaNfse->{1} = $compNfse;
-$std->ListaNfse->{2} = $compNfse;
+$std->compNfse = $compNfse;
+
+//$std->listamensagemretorno = new stdClass();
+//$std->listamensagemretorno->mensagemRetorno = (object)[];
+//
+//$mensagemRetorno = new stdClass();
+//$mensagemRetorno->Codigo = '001';
+//$mensagemRetorno->Mensagem = '002';
+//$mensagemRetorno->Correcao = '003';
+//
+//$std->listamensagemretorno->mensagemRetorno->{1} = $mensagemRetorno;
+
 
 header("Content-type: text/xml");
-$class = new ConsultaNfseFaixaResposta();
-$class->save($std, 'examples/xml', 'ConsultaNfseFaixaResposta');
+$class = new ConsultaNfseRpsResposta();
+$class->save($std, 'examples/xml/abrasf', 'ConsultaNfseRpsResposta');

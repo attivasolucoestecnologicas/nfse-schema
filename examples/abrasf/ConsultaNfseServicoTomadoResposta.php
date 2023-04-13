@@ -1,10 +1,10 @@
 <?php
 
-use Ativasolucoestecnologicas\Nfse\ConsultaNfseServicoPrestadoResposta;
+use Ativasolucoestecnologicas\Nfse\ConsultaNfseServicoTomadoResposta;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 $std = new stdClass();
 
@@ -139,5 +139,5 @@ $std->ListaNfse->{1} = $compNfse;
 $std->ListaNfse->{2} = $compNfse;
 
 header("Content-type: text/xml");
-$class = new ConsultaNfseServicoPrestadoResposta();
-$class->save($std, 'examples/xml', 'ConsultaNfseServicoPrestadoResposta');
+$class = new ConsultaNfseServicoTomadoResposta();
+$class->save($std, 'examples/xml/abrasf', 'ConsultaNfseServicoTomadoResposta');

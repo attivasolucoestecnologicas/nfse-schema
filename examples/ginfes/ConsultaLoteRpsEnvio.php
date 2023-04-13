@@ -16,4 +16,4 @@ $std->prestador->InscricaoMunicipal = '12345678';
 
 header("Content-type: text/xml");
 $class = new ConsultaLoteRpsEnvio();
-$class->save($std, 'examples/ginfes/xml', 'ConsultaLoteRpsEnvio');
+$class->save($std, 'examples/xml/ginfes', 'ConsultaLoteRpsEnvio');
