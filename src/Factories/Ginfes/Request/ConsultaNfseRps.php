@@ -3,7 +3,7 @@
 namespace Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Request;
 
 use Ativasolucoestecnologicas\Nfse\Common\Base;
-use Ativasolucoestecnologicas\Nfse\Common\Elements\ConsultarNfseRpsEnvio;
+use Ativasolucoestecnologicas\Nfse\Common\Elements\Ginfes\ConsultarNfseRpsEnvio;
 
 class ConsultaNfseRps extends Base
 {

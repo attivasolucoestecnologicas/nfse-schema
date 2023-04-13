@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConsultarNfseRpsEnvio xmlns="https://wjdev.net.br/abrasf/schemes/servico_consultar_nfse_rps_envio_v03.xsd">
+    <IdentificacaoRps>
+        <Numero>123456789012345</Numero>
+        <Serie>ABC</Serie>
+        <Tipo>1</Tipo>
+    </IdentificacaoRps>
+    <Prestador>
+        <Cnpj>12345678901234</Cnpj>
+        <InscricaoMunicipal>12345678</InscricaoMunicipal>
+    </Prestador>
+</ConsultarNfseRpsEnvio>
