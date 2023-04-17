@@ -1,6 +1,6 @@
 <?php
 
-use Ativasolucoestecnologicas\Nfse\Rps;
+use Ativasolucoestecnologicas\Nfse\Renders\Abrasf\Rps;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');

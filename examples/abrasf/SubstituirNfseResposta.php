@@ -1,6 +1,6 @@
 <?php
 
-use Ativasolucoestecnologicas\Nfse\SubstituirNfseResposta;
+use Ativasolucoestecnologicas\Nfse\Renders\Abrasf\SubstituirNfseResposta;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');

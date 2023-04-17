@@ -1,6 +1,6 @@
 <?php
 
-use Ativasolucoestecnologicas\Nfse\ConsultaNfseServicoPrestadoResposta;
+use Ativasolucoestecnologicas\Nfse\Renders\Abrasf\ConsultaNfseServicoPrestadoResposta;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ativasolucoestecnologicas\Nfse;
+namespace Ativasolucoestecnologicas\Nfse\Renders\Abrasf;
 
 use Ativasolucoestecnologicas\Nfse\Common\Factory;
 use Ativasolucoestecnologicas\Nfse\Common\Init;

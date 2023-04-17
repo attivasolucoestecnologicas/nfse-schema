@@ -1,6 +1,6 @@
 <?php
 
-use Ativasolucoestecnologicas\Nfse\Nfse;
+use Ativasolucoestecnologicas\Nfse\Renders\Abrasf\Nfse;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');

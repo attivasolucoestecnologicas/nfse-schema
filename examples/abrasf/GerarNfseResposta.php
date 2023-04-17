@@ -1,5 +1,5 @@
 <?php
-use Ativasolucoestecnologicas\Nfse\GerarNfseResposta;
+use Ativasolucoestecnologicas\Nfse\Renders\Abrasf\GerarNfseResposta;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');

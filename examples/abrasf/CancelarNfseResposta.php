@@ -1,6 +1,6 @@
 <?php
 
-use Ativasolucoestecnologicas\Nfse\CancelarNfseResposta;
+use Ativasolucoestecnologicas\Nfse\Renders\Abrasf\CancelarNfseResposta;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');

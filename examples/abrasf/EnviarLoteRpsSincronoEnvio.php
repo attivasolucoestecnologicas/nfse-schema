@@ -1,6 +1,6 @@
 <?php
 
-use Ativasolucoestecnologicas\Nfse\EnviarLoteRpsSincronoEnvio;
+use Ativasolucoestecnologicas\Nfse\Renders\Abrasf\EnviarLoteRpsSincronoEnvio;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConsultarSituacaoLoteRpsEnvio
+        xmlns="https://wjdev.net.br/abrasf/schemes/servico_consultar_situacao_lote_rps_envio_v03.xsd" Id="001">
+    <Prestador>
+        <Cnpj>12345678901234</Cnpj>
+        <InscricaoMunicipal>12345678</InscricaoMunicipal>
+    </Prestador>
+    <Protocolo>123456789</Protocolo>
+</ConsultarSituacaoLoteRpsEnvio>

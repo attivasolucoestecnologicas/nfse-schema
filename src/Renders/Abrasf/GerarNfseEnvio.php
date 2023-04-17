@@ -1,14 +1,14 @@
 <?php
 
-namespace Ativasolucoestecnologicas\Nfse;
+namespace Ativasolucoestecnologicas\Nfse\Renders\Abrasf;
 
 use Ativasolucoestecnologicas\Nfse\Common\Factory;
 use Ativasolucoestecnologicas\Nfse\Common\Init;
 
-class ConsultaNfseFaixaEnvio extends Init
+class GerarNfseEnvio extends Init
 {
     public function __construct()
     {
-        parent::__construct(Factory::CONSULTA_NFSE_FAIXA_ENVIO);
+        parent::__construct(Factory::GERA_NFSE_ENVIO);
     }
 }

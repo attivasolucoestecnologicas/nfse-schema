@@ -2,7 +2,6 @@
 
 namespace Ativasolucoestecnologicas\Nfse\Common;
 
-//use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Nfse;
 use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Request\CancelarNfse as CancelarNfseRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Request\ConsultaLoteRps as ConsultaLoteRpsRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Request\ConsultaNfse as ConsultaNfseRequest;
@@ -14,6 +13,7 @@ use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Request\EnviarLoteRps as Env
 use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Request\EnviarLoteRpsSincrono as EnviarLoteRpsSincronoRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Request\GerarNfse as GerarNfseRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Request\SubstituirNfse as SubstituirNfseRequest;
+use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Request\ConsultaSituacaoLoteRps as ConsultaSituacaoLoteRpsRequest;
 use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Response\CancelarNfse as CancelarNfseResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Response\ConsultaLoteRps as ConsultaLoteRpsResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Response\ConsultaNfse as ConsultaNfseResponse;
@@ -24,8 +24,7 @@ use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Response\ConsultaNfseServico
 use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Response\EnviarLoteRps as EnviarLoteRpsResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Response\EnviarLoteRpsSincrono as EnviarLoteRpsSincronoResponse;
 use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Response\SubstituirNfse as SubstituirNfseResponse;
-
-//use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Rps;
+use Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Response\ConsultaSituacaoLoteRps as ConsultaSituacaoLoteRpsResponse;
 
 class FactoryGinfes
 {
@@ -53,6 +52,8 @@ class FactoryGinfes
     const CONSULTA_NFSE_SERVICO_TOMADO_RESPOSTA = 'ConsultaNfseServicoTomadoResponse';
     const CONSULTA_NFSE_FAIXA_ENVIO = 'ConsultaNfseFaixaRequest';
     const CONSULTA_NFSE_FAIXA_RESPOSTA = 'ConsultaNfseFaixaResponse';
+    const CONSULTA_SITUACAO_LOTE_RPS_ENVIO = 'ConsultaSituacaoLoteRpsRequest';
+    const CONSULTA_SITUACAO_LOTE_RPS_RESPOSTA = 'ConsultaSituacaoLoteRpsResponse';
 
     public function render($std, $type)
     {
@@ -63,6 +64,10 @@ class FactoryGinfes
 //                return new Rps($std);
             case self::ENVIO_LOTE_RPS_ENVIO :
                 return new EnviarLoteRpsRequest($std);
+            case self::CONSULTA_SITUACAO_LOTE_RPS_ENVIO :
+                return new ConsultaSituacaoLoteRpsRequest($std);
+            case self::CONSULTA_SITUACAO_LOTE_RPS_RESPOSTA :
+                return new ConsultaSituacaoLoteRpsResponse($std);
             case self::CONSULTA_NFSE_ENVIO :
                 return new ConsultaNfseRequest($std);
             case self::CONSULTA_NFSE_RESPOSTA :

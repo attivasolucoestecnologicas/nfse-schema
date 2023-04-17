@@ -1,6 +1,6 @@
 <?php
 
-use Ativasolucoestecnologicas\Nfse\ConsultaNfseRpsEnvio;
+use Ativasolucoestecnologicas\Nfse\Renders\Abrasf\ConsultaNfseRpsEnvio;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
