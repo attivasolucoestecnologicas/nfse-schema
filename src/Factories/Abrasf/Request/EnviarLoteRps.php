@@ -1,25 +1,17 @@
 <?php
 
-namespace Ativasolucoestecnologicas\Nfse\Factories;
+namespace Ativasolucoestecnologicas\Nfse\Factories\Abrasf\Request;
 
 use Ativasolucoestecnologicas\Nfse\Common\Base;
 use Ativasolucoestecnologicas\Nfse\Common\Elements\Abrasf\EnviarLoteRpsEnvio;
-use DOMNode;
-use stdClass;
 
-class Rps extends Base
+class EnviarLoteRps extends Base
 {
-    /**
-     * @var DOMNode
-     */
-    protected $rps;
-
-    public function __construct(stdClass $std)
+    public function __construct(\stdClass $std)
     {
         parent::__construct($std);
         $this->mount();
     }
-
 
     private function mount()
     {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Ativasolucoestecnologicas\Nfse\Factories;
+namespace Ativasolucoestecnologicas\Nfse\Factories\Abrasf\Response;
 
 use Ativasolucoestecnologicas\Nfse\Common\Base;
-use Ativasolucoestecnologicas\Nfse\Common\Elements\Abrasf\EnviarLoteRpsEnvio;
+use Ativasolucoestecnologicas\Nfse\Common\Elements\Abrasf\EnviarLoteRpsSincronoResposta;
 use DOMNode;
 use stdClass;
 
-class Rps extends Base
+class EnviarLoteRpsSincrono extends Base
 {
     /**
      * @var DOMNode
@@ -23,6 +23,6 @@ class Rps extends Base
 
     private function mount()
     {
-        EnviarLoteRpsEnvio::mount($this->std, $this->dom);
+        EnviarLoteRpsSincronoResposta::mount($this->std, $this->dom);
     }
 }

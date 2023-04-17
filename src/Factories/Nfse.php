@@ -3,7 +3,7 @@
 namespace Ativasolucoestecnologicas\Nfse\Factories;
 
 use Ativasolucoestecnologicas\Nfse\Common\Base;
-use Ativasolucoestecnologicas\Nfse\Common\Elements\CompNfse;
+use Ativasolucoestecnologicas\Nfse\Common\Elements\Abrasf\CompNfse;
 use DOMNode;
 use stdClass;
 
