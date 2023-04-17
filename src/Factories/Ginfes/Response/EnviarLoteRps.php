@@ -3,7 +3,7 @@
 namespace Ativasolucoestecnologicas\Nfse\Factories\Ginfes\Response;
 
 use Ativasolucoestecnologicas\Nfse\Common\Base;
-use Ativasolucoestecnologicas\Nfse\Common\Elements\EnviarLoteRpsResposta as ElementEnviarLoteRpsResposta;
+use Ativasolucoestecnologicas\Nfse\Common\Elements\Ginfes\EnviarLoteRpsResposta;
 use DOMNode;
 use stdClass;
 
@@ -23,6 +23,6 @@ class EnviarLoteRps extends Base
 
     private function mount()
     {
-        ElementEnviarLoteRpsResposta::mount($this->std, $this->dom);
+        EnviarLoteRpsResposta::mount($this->std, $this->dom);
     }
 }

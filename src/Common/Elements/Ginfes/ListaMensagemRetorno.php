@@ -17,7 +17,13 @@ class ListaMensagemRetorno
     {
         $node = $dom->createElement($element);
 
-        MensagemRetorno::mount($std->mensagemretorno, $dom, $node);
+        if ($std->mensagemretorno->codigo ?? null) {
+            MensagemRetorno::mount($std->mensagemretorno, $dom, $node);
+        } else {
+            foreach ($std->mensagemretorno as $item) {
+                MensagemRetorno::mount($item, $dom, $node);
+            }
+        }
 
         $parent->appendChild($node);
         $dom->appendChild($parent);

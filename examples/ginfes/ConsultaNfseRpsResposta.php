@@ -109,16 +109,6 @@ $compNfse->Nfse->InfNfse->ConstrucaoCivil->Art = 'AL';
 
 $std->compNfse = $compNfse;
 
-//$std->listamensagemretorno = new stdClass();
-//$std->listamensagemretorno->mensagemRetorno = (object)[];
-//
-//$mensagemRetorno = new stdClass();
-//$mensagemRetorno->Codigo = '001';
-//$mensagemRetorno->Mensagem = '002';
-//$mensagemRetorno->Correcao = '003';
-//
-//$std->listamensagemretorno->mensagemRetorno->{1} = $mensagemRetorno;
-
 
 header("Content-type: text/xml");
 $class = new ConsultaNfseRpsResposta();

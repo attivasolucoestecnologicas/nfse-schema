@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EnviarLoteRpsResposta xmlns="https://wjdev.net.br/abrasf/schemes/servico_enviar_lote_rps_resposta_v03.xsd">
+    <ListaMensagemRetorno>
+        <MensagemRetorno>
+            <Codigo>001</Codigo>
+            <Mensagem>002</Mensagem>
+            <Correcao>003</Correcao>
+        </MensagemRetorno>
+        <MensagemRetorno>
+            <Codigo>001</Codigo>
+            <Mensagem>002</Mensagem>
+            <Correcao>003</Correcao>
+        </MensagemRetorno>
+    </ListaMensagemRetorno>
+</EnviarLoteRpsResposta>
