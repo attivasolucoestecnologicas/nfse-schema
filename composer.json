@@ -1,5 +1,12 @@
 {
     "name": "ativasolucoestecnologicas/nfse",
+    "description": "Biblioteca PHP para geração XML no layout ABRASF - NFSe",
+    "license": "GPL-2.0",
+    "keywords": [
+        "xml",
+        "nfse",
+        "abrasf"
+    ],
     "autoload": {
         "psr-4": {
             "Ativasolucoestecnologicas\\Nfse\\": "src/"
@@ -7,11 +14,16 @@
     },
     "authors": [
         {
+            "name": "Paulo Soares",
+            "email": "soarescbm@gmail.com"
+        },
+        {
             "name": "Walber Jefferson",
             "email": "walberjefferson@hotmail.com"
         }
     ],
     "require": {
+        "php": ">= 7.4",
         "nfephp-org/sped-common": "^5.1",
         "ext-dom": "*",
         "ext-libxml": "*",
