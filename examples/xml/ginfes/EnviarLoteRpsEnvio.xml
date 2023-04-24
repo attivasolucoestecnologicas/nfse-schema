@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EnviarLoteRpsEnvio xmlns="https://wjdev.net.br/abrasf/schemes/servico_enviar_lote_rps_envio_v03.xsd">
+    <LoteRps Id="001">
+        <NumeroLote>123456789012345</NumeroLote>
+        <Cnpj>12345678901234</Cnpj>
+        <InscricaoMunicipal>123456789</InscricaoMunicipal>
+        <QuantidadeRps>2</QuantidadeRps>
+        <ListaRps>
+            <Rps>
+                <InfRps Id="001">
+                    <IdentificacaoRps>
+                        <Numero>1234</Numero>
+                        <Serie>ABC</Serie>
+                        <Tipo>1</Tipo>
+                    </IdentificacaoRps>
+                    <DataEmissao>2023-03-08T23:00:00</DataEmissao>
+                    <NaturezaOperacao>1</NaturezaOperacao>
+                    <RegimeEspecialTributacao>1</RegimeEspecialTributacao>
+                    <OptanteSimplesNacional>1</OptanteSimplesNacional>
+                    <IncentivadorCultural>0</IncentivadorCultural>
+                    <Status>1</Status>
+                    <RpsSubstituido>
+                        <Numero>1234</Numero>
+                        <Serie>ABC</Serie>
+                        <Tipo>1</Tipo>
+                    </RpsSubstituido>
+                    <Servico>
+                        <Valores>
+                            <ValorServicos>1000</ValorServicos>
+                            <ValorDeducoes>0</ValorDeducoes>
+                            <ValorPis>0</ValorPis>
+                            <ValorCofins>0</ValorCofins>
+                            <ValorInss>0</ValorInss>
+                            <ValorIr>0</ValorIr>
+                            <ValorCsll>0</ValorCsll>
+                            <IssRetido>0</IssRetido>
+                            <ValorIss>0</ValorIss>
+                            <ValorIssRetido>0</ValorIssRetido>
+                            <OutrasRetencoes>0</OutrasRetencoes>
+                            <BaseCalculo>0</BaseCalculo>
+                            <Aliquota>0</Aliquota>
+                            <ValorLiquidoNfse>0</ValorLiquidoNfse>
+                            <DescontoIncondicionado>0</DescontoIncondicionado>
+                            <DescontoCondicionado>0</DescontoCondicionado>
+                        </Valores>
+                        <ItemListaServico>001</ItemListaServico>
+                        <CodigoCnae>123</CodigoCnae>
+                        <CodigoTributacaoMunicipio>001</CodigoTributacaoMunicipio>
+                        <Discriminacao>Conteúdo da NFS-e</Discriminacao>
+                        <CodigoMunicipio>123</CodigoMunicipio>
+                    </Servico>
+                    <Prestador>
+                        <Cnpj>12345678901</Cnpj>
+                        <InscricaoMunicipal>123456789</InscricaoMunicipal>
+                    </Prestador>
+                    <Tomador>
+                        <IdentificacaoTomador>
+                            <CpfCnpj>
+                                <Cpf>12345678901</Cpf>
+                            </CpfCnpj>
+                            <InscricaoMunicipal>123456789</InscricaoMunicipal>
+                        </IdentificacaoTomador>
+                        <RazaoSocial>123456789</RazaoSocial>
+                        <Endereco>
+                            <Endereco>Rua Teste</Endereco>
+                            <Numero>SN</Numero>
+                            <Complemento>Sem complemento</Complemento>
+                            <Bairro>Centro</Bairro>
+                            <CodigoMunicipio>82</CodigoMunicipio>
+                            <Uf>AL</Uf>
+                            <Cep>00000000</Cep>
+                        </Endereco>
+                        <Contato>
+                            <Telefone>8899999999</Telefone>
+                            <Email>none@none.com</Email>
+                        </Contato>
+                    </Tomador>
+                    <IntermediarioServico>
+                        <RazaoSocial>Empresa teste</RazaoSocial>
+                        <CpfCnpj>
+                            <Cpf>12345678901</Cpf>
+                        </CpfCnpj>
+                        <InscricaoMunicipal>123456789</InscricaoMunicipal>
+                    </IntermediarioServico>
+                    <ConstrucaoCivil>
+                        <CodigoObra>001</CodigoObra>
+                        <Art>111</Art>
+                    </ConstrucaoCivil>
+                </InfRps>
+            </Rps>
+        </ListaRps>
+    </LoteRps>
+</EnviarLoteRpsEnvio>

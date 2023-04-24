@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ConsultarNfseRpsEnvio xmlns="http://nfedemo.portalfacil.com.br/nfseserv/schema/nfse_v202.xsd">
+<IdentificacaoRps><Numero>132</Numero><Serie>SIST</Serie><Tipo>1</Tipo></IdentificacaoRps>
+<Prestador><CpfCnpj><Cnpj>38543146000156</Cnpj></CpfCnpj><InscricaoMunicipal>0</InscricaoMunicipal></Prestador>
+</ConsultarNfseRpsEnvio>

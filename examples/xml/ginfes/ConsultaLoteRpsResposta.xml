@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConsultarLoteRpsResposta xmlns="https://wjdev.net.br/abrasf/schemes/servico_consultar_lote_rps_resposta_v03.xsd">
+    <ListaNfse>
+        <CompNfse>
+            <Nfse>
+                <InfNfse Id="123">
+                    <Numero>123456</Numero>
+                    <CodigoVerificacao>123</CodigoVerificacao>
+                    <DataEmissao>2023-03-07T15:29:00</DataEmissao>
+                    <IdentificacaoRps>
+                        <Numero>1</Numero>
+                        <Serie>1</Serie>
+                        <Tipo>1</Tipo>
+                    </IdentificacaoRps>
+                    <DataEmissaoRps>2023-04-10</DataEmissaoRps>
+                    <NaturezaOperacao>1</NaturezaOperacao>
+                    <RegimeEspecialTributacao>1</RegimeEspecialTributacao>
+                    <OptanteSimplesNacional>1</OptanteSimplesNacional>
+                    <IncentivadorCultural>1</IncentivadorCultural>
+                    <Competencia>1</Competencia>
+                    <NfseSubstituida>1</NfseSubstituida>
+                    <OutrasInformacoes>Informações complementares</OutrasInformacoes>
+                    <Servico>
+                        <Valores>
+                            <ValorServicos>1</ValorServicos>
+                            <ValorDeducoes>0</ValorDeducoes>
+                            <ValorPis>0</ValorPis>
+                            <ValorCofins>0</ValorCofins>
+                            <ValorInss>0</ValorInss>
+                            <ValorIr>0</ValorIr>
+                            <ValorCsll>0</ValorCsll>
+                            <IssRetido>1</IssRetido>
+                            <ValorIss>0</ValorIss>
+                            <ValorIssRetido>0</ValorIssRetido>
+                            <OutrasRetencoes>0</OutrasRetencoes>
+                            <BaseCalculo>0</BaseCalculo>
+                            <Aliquota>0</Aliquota>
+                            <ValorLiquidoNfse>0</ValorLiquidoNfse>
+                            <DescontoIncondicionado>0</DescontoIncondicionado>
+                            <DescontoCondicionado>0</DescontoCondicionado>
+                        </Valores>
+                        <ItemListaServico>1</ItemListaServico>
+                        <CodigoCnae>1</CodigoCnae>
+                        <CodigoTributacaoMunicipio>1</CodigoTributacaoMunicipio>
+                        <Discriminacao>1</Discriminacao>
+                        <CodigoMunicipio>1</CodigoMunicipio>
+                    </Servico>
+                    <ValorCredito>0</ValorCredito>
+                    <PrestadorServico>
+                        <IdentificacaoPrestador>
+                            <Cnpj>12345678901</Cnpj>
+                            <InscricaoMunicipal>9876543210</InscricaoMunicipal>
+                        </IdentificacaoPrestador>
+                        <RazaoSocial>Fulano de Tal</RazaoSocial>
+                        <NomeFantasia>Armazem</NomeFantasia>
+                        <Endereco>
+                            <Endereco>Rua Teste</Endereco>
+                            <Numero>22</Numero>
+                            <Complemento>Sem complemento</Complemento>
+                            <Bairro>Centro</Bairro>
+                            <CodigoMunicipio>82</CodigoMunicipio>
+                            <Uf>AL</Uf>
+                            <Cep>55555555</Cep>
+                        </Endereco>
+                        <Contato>
+                            <Telefone>8899999999</Telefone>
+                            <Email>none@mail.com</Email>
+                        </Contato>
+                    </PrestadorServico>
+                    <TomadorServico>
+                        <IdentificacaoTomador>
+                            <CpfCnpj>
+                                <Cpf>12345678901</Cpf>
+                            </CpfCnpj>
+                            <InscricaoMunicipal>9876543210</InscricaoMunicipal>
+                        </IdentificacaoTomador>
+                        <RazaoSocial>Fulano de Tal</RazaoSocial>
+                        <Endereco>
+                            <Endereco>Rua Teste</Endereco>
+                            <Numero>22</Numero>
+                            <Complemento>Sem complemento</Complemento>
+                            <Bairro>Centro</Bairro>
+                            <CodigoMunicipio>82</CodigoMunicipio>
+                            <Uf>AL</Uf>
+                            <Cep>55555555</Cep>
+                        </Endereco>
+                        <Contato>
+                            <Telefone>8899999999</Telefone>
+                            <Email>none@mail.com</Email>
+                        </Contato>
+                    </TomadorServico>
+                    <IntermediarioServico>
+                        <RazaoSocial>Fulano de Tal</RazaoSocial>
+                        <CpfCnpj>
+                            <Cpf>12345678901</Cpf>
+                        </CpfCnpj>
+                        <InscricaoMunicipal>9876543210</InscricaoMunicipal>
+                    </IntermediarioServico>
+                    <OrgaoGerador>
+                        <CodigoMunicipio>1234</CodigoMunicipio>
+                        <Uf>AL</Uf>
+                    </OrgaoGerador>
+                    <ConstrucaoCivil>
+                        <CodigoObra>1234</CodigoObra>
+                        <Art>AL</Art>
+                    </ConstrucaoCivil>
+                </InfNfse>
+            </Nfse>
+        </CompNfse>
+    </ListaNfse>
+</ConsultarLoteRpsResposta>

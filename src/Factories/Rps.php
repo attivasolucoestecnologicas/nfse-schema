@@ -2,31 +2,13 @@
 
 namespace Ativasolucoestecnologicas\Nfse\Factories;
 
-use Ativasolucoestecnologicas\Nfse\Common\Elements\ListaRps;
+use Ativasolucoestecnologicas\Nfse\Common\Base;
+use Ativasolucoestecnologicas\Nfse\Common\Elements\Abrasf\EnviarLoteRpsEnvio;
 use DOMNode;
-use NFePHP\Common\DOMImproved as Dom;
 use stdClass;
 
-class Rps
+class Rps extends Base
 {
-    /**
-     * @var stdClass
-     */
-    protected $std;
-    /**
-     * @var string
-     */
-    protected $ver;
-    /**
-     * @var string
-     */
-    protected $jsonschema;
-
-    /**
-     * @var Dom
-     */
-    protected $dom;
-
     /**
      * @var DOMNode
      */
@@ -34,75 +16,13 @@ class Rps
 
     public function __construct(stdClass $std)
     {
-        $this->std = $std;
-
-        $this->dom = new Dom('1.0', 'UTF-8');
-        $this->dom->preserveWhiteSpace = false;
-        $this->dom->formatOutput = false;
-        $this->rps = $this->dom->createElement('EnviarLoteRpsEnvio');
-
+        parent::__construct($std);
         $this->mount();
     }
 
 
     private function mount()
     {
-        $infRps = $this->dom->createElement('LoteRps');
-
-        $this->dom->addChild(
-            $infRps,
-            "NumeroLote",
-            $this->std->identificacaorps->numerolote,
-            true
-        );
-        $this->dom->addChild(
-            $infRps,
-            "CpfCnpj",
-            $this->std->identificacaorps->cpfcnpj,
-            true
-        );
-        $this->dom->addChild(
-            $infRps,
-            "InscricaoMunicipal",
-            $this->std->identificacaorps->inscricaomunicipal,
-            false
-        );
-        $this->dom->addChild(
-            $infRps,
-            "QuantidadeRps",
-            $this->std->identificacaorps->quantidaderps,
-            true
-        );
-
-        ListaRps::mount($this->std->listarps, $this->dom, $infRps);
-
-        $this->dom->addChild(
-            $infRps,
-            "Id",
-            $this->std->identificacaorps->id,
-            true
-        );
-
-        $this->dom->addChild(
-            $infRps,
-            "versao",
-            $this->std->identificacaorps->versao,
-            true
-        );
-
-        $this->rps->appendChild($infRps);
-        $this->dom->appendChild($this->rps);
-    }
-
-    public function toString()
-    {
-//        $this->mount();
-        return str_replace('<?xml version="1.0" encoding="UTF-8"?>', '', $this->dom->saveXML());
-    }
-
-    public function toXml()
-    {
-//        $this->mount();
-        return $this->dom->saveXML();
+        EnviarLoteRpsEnvio::mount($this->std, $this->dom);
     }
 }

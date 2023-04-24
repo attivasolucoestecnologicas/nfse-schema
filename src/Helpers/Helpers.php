@@ -24,4 +24,25 @@ class Helpers
         }
         return $clone;
     }
+
+    public static function strNumber($string = null)
+    {
+        if ($string) {
+            return preg_replace("/[^0-9]/", "", $string);
+        }
+        return null;
+    }
+
+    public static function save($file, $path = '/tmp', $name = null)
+    {
+        if (!is_dir($path)) {
+            mkdir($path, 0777, true);
+        }
+
+        if (is_null($name)) {
+            $name = (new \ReflectionClass($file))->getShortName();
+        }
+
+        return "{$path}/{$name}.xml";
+    }
 }

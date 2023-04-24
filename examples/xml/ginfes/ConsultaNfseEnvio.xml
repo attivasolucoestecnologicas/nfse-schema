@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConsultarNfseEnvio xmlns="https://wjdev.net.br/abrasf/schemes/servico_consultar_nfse_envio_v03.xsd" Id="001">
+    <Prestador>
+        <Cnpj>12345678901234</Cnpj>
+        <InscricaoMunicipal>12345678</InscricaoMunicipal>
+    </Prestador>
+    <NumeroNfse>1234567</NumeroNfse>
+    <PeriodoEmissao>
+        <DataInicial>2023-04-10</DataInicial>
+        <DataFinal>2023-04-10</DataFinal>
+    </PeriodoEmissao>
+    <Tomador>
+        <CpfCnpj>
+            <Cpf>12345678901</Cpf>
+        </CpfCnpj>
+        <InscricaoMunicipal>9876543210</InscricaoMunicipal>
+    </Tomador>
+    <IntermediarioServico>
+        <RazaoSocial>Fulano de Tal</RazaoSocial>
+        <CpfCnpj>
+            <Cpf>12345678901</Cpf>
+        </CpfCnpj>
+        <InscricaoMunicipal>9876543210</InscricaoMunicipal>
+    </IntermediarioServico>
+</ConsultarNfseEnvio>

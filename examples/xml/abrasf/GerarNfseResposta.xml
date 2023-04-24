@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GerarNfseResposta>
+    <ListaMensagemRetorno>
+        <MensagemRetorno>
+            <Codigo>1234</Codigo>
+            <Mensagem>Mensagem Teste</Mensagem>
+            <Correcao>121212</Correcao>
+        </MensagemRetorno>
+    </ListaMensagemRetorno>
+</GerarNfseResposta>

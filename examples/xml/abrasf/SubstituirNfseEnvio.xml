@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SubstituirNfseEnvio xmlns="https://wjdev.net.br/abrasf/v203/nfse.xsd">
+    <SubstituicaoNfse Id="2.03">
+        <Pedido>
+            <InfPedidoCancelamento Id="001">
+                <IdentificacaoNfse>
+                    <Numero>121234</Numero>
+                    <CpfCnpj>
+                        <Cnpj>12345678901234</Cnpj>
+                    </CpfCnpj>
+                    <InscricaoMunicipal>12345678</InscricaoMunicipal>
+                    <CodigoMunicipio>1234567</CodigoMunicipio>
+                </IdentificacaoNfse>
+                <CodigoCancelamento>1</CodigoCancelamento>
+            </InfPedidoCancelamento>
+        </Pedido>
+        <Rps>
+            <InfDeclaracaoPrestacaoServico Id="001">
+                <Rps Id="1234">
+                    <IdentificacaoRps>
+                        <Numero>1234</Numero>
+                        <Serie>ABC</Serie>
+                        <Tipo>1</Tipo>
+                    </IdentificacaoRps>
+                    <DataEmissao>2023-03-08</DataEmissao>
+                    <Status>1</Status>
+                    <RpsSubstituido>
+                        <Numero>1234</Numero>
+                        <Serie>ABC</Serie>
+                        <Tipo>1</Tipo>
+                    </RpsSubstituido>
+                </Rps>
+                <Competencia>2023-02-09</Competencia>
+                <Servico>
+                    <Valores>
+                        <ValorServicos>1000</ValorServicos>
+                        <ValorDeducoes>0</ValorDeducoes>
+                        <ValorPis>0</ValorPis>
+                        <ValorCofins>0</ValorCofins>
+                        <ValorInss>0</ValorInss>
+                        <ValorIr>0</ValorIr>
+                        <ValorCsll>0</ValorCsll>
+                        <OutrasRetencoes>0</OutrasRetencoes>
+                        <ValTotTributos>0</ValTotTributos>
+                        <ValorIss>0</ValorIss>
+                        <Aliquota>0</Aliquota>
+                        <DescontoIncondicionado>0</DescontoIncondicionado>
+                        <DescontoCondicionado>0</DescontoCondicionado>
+                    </Valores>
+                    <IssRetido>1</IssRetido>
+                    <ResponsavelRetencao>1</ResponsavelRetencao>
+                    <ItemListaServico>001</ItemListaServico>
+                    <CodigoCnae>123</CodigoCnae>
+                    <CodigoTributacaoMunicipio>001</CodigoTributacaoMunicipio>
+                    <CodigoNbs>001</CodigoNbs>
+                    <Discriminacao>Conteúdo da NFS-e</Discriminacao>
+                    <CodigoMunicipio>123</CodigoMunicipio>
+                    <CodigoPais>1234</CodigoPais>
+                    <ExigibilidadeISS>1</ExigibilidadeISS>
+                    <MunicipioIncidencia>1</MunicipioIncidencia>
+                    <NumeroProcesso>001</NumeroProcesso>
+                </Servico>
+                <Prestador>
+                    <CpfCnpj>
+                        <Cpf>12345678901</Cpf>
+                    </CpfCnpj>
+                    <InscricaoMunicipal>123456789</InscricaoMunicipal>
+                </Prestador>
+                <TomadorServico>
+                    <IdentificacaoTomador>
+                        <CpfCnpj>
+                            <Cpf>12345678901</Cpf>
+                        </CpfCnpj>
+                        <InscricaoMunicipal>123456789</InscricaoMunicipal>
+                    </IdentificacaoTomador>
+                    <NifTomador>12345678901</NifTomador>
+                    <RazaoSocial>123456789</RazaoSocial>
+                    <Endereco>
+                        <Endereco>Rua Teste</Endereco>
+                        <Numero>SN</Numero>
+                        <Complemento>Sem complemento</Complemento>
+                        <Bairro>Centro</Bairro>
+                        <CodigoMunicipio>82</CodigoMunicipio>
+                        <Uf>AL</Uf>
+                        <CodigoPais>1001</CodigoPais>
+                        <Cep>00000000</Cep>
+                    </Endereco>
+                    <Contato>
+                        <Telefone>8899999999</Telefone>
+                        <Email>none@none.com</Email>
+                    </Contato>
+                </TomadorServico>
+                <Intermediario>
+                    <IdentificacaoIntermediario>
+                        <CpfCnpj>
+                            <Cpf>12345678901</Cpf>
+                        </CpfCnpj>
+                        <InscricaoMunicipal>123456789</InscricaoMunicipal>
+                    </IdentificacaoIntermediario>
+                    <RazaoSocial>Empresa teste</RazaoSocial>
+                    <CodigoMunicipio>1234567</CodigoMunicipio>
+                </Intermediario>
+                <ConstrucaoCivil>
+                    <CodigoObra>001</CodigoObra>
+                    <Art>111</Art>
+                </ConstrucaoCivil>
+                <RegimeEspecialTributacao>1</RegimeEspecialTributacao>
+                <OptanteSimplesNacional>1</OptanteSimplesNacional>
+                <IncentivoFiscal>2</IncentivoFiscal>
+            </InfDeclaracaoPrestacaoServico>
+        </Rps>
+    </SubstituicaoNfse>
+</SubstituirNfseEnvio>

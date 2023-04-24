@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConsultarNfseServicoPrestadoEnvio xmlns="https://wjdev.net.br/abrasf/v203/nfse.xsd">
+    <Prestador>
+        <CpfCnpj>
+            <Cnpj>12345678901234</Cnpj>
+        </CpfCnpj>
+        <InscricaoMunicipal>12345678</InscricaoMunicipal>
+    </Prestador>
+    <NumeroNfse>123456</NumeroNfse>
+    <PeriodoEmissao>
+        <DataInicial>2023-03-15</DataInicial>
+        <DataFinal>2023-03-15</DataFinal>
+    </PeriodoEmissao>
+    <Tomador>
+        <CpfCnpj>
+            <Cpf>12345678901</Cpf>
+        </CpfCnpj>
+        <InscricaoMunicipal>123456789</InscricaoMunicipal>
+    </Tomador>
+    <Intermediario>
+        <CpfCnpj>
+            <Cpf>12345678901</Cpf>
+        </CpfCnpj>
+        <InscricaoMunicipal>123456789</InscricaoMunicipal>
+    </Intermediario>
+    <Pagina>1</Pagina>
+</ConsultarNfseServicoPrestadoEnvio>
