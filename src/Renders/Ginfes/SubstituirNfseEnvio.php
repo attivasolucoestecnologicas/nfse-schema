@@ -1,0 +1,14 @@
+<?php
+
+namespace Ativasolucoestecnologicas\Nfse\Renders\Ginfes;
+
+use Ativasolucoestecnologicas\Nfse\Common\FactoryGinfes;
+use Ativasolucoestecnologicas\Nfse\Common\InitGinfes as Init;
+
+class SubstituirNfseEnvio extends Init
+{
+    public function __construct()
+    {
+        parent::__construct(FactoryGinfes::SUBSTITUIR_NFSE_ENVIO);
+    }
+}

@@ -17,8 +17,7 @@
 					<xsd:element name="Protocolo" type="tipos:tsNumeroProtocolo"
 						minOccurs="1" maxOccurs="1" />
 				</xsd:sequence>
-				<xsd:element ref="tipos:ListaMensagemRetorno" minOccurs="1"
-					maxOccurs="1" />
+				<xsd:element ref="tipos:ListaMensagemRetorno" minOccurs="1" maxOccurs="1" />
 			</xsd:choice>
 		</xsd:complexType>
 	</xsd:element>

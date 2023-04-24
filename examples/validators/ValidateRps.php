@@ -4,8 +4,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-$xml = __DIR__ . "/../xml/Rps.xml";
-$xsd = __DIR__ . "/../scheme/v2-03/nfse.xsd";
+$xml = __DIR__ . "/../ginfes/xml/ConsultaLoteRpsEnvio.xml";
+$xsd = __DIR__ . "/../../schemes/servico_consultar_lote_rps_envio_v03.xsd";
 $content = file_get_contents($xml);
 
 try {

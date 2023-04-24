@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CancelarNfseEnvio xmlns="https://wjdev.net.br/abrasf/schemes/servico_cancelar_nfse_envio_v03.xsd">
+    <Pedido>
+        <InfPedidoCancelamento Id="001">
+            <IdentificacaoNfse>
+                <Numero>121234</Numero>
+                <Cnpj>12345678901234</Cnpj>
+                <InscricaoMunicipal>12345678</InscricaoMunicipal>
+                <CodigoMunicipio>1234567</CodigoMunicipio>
+            </IdentificacaoNfse>
+            <CodigoCancelamento>1</CodigoCancelamento>
+        </InfPedidoCancelamento>
+    </Pedido>
+</CancelarNfseEnvio>

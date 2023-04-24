@@ -3,7 +3,7 @@
 namespace Ativasolucoestecnologicas\Nfse\Factories;
 
 use Ativasolucoestecnologicas\Nfse\Common\Base;
-use Ativasolucoestecnologicas\Nfse\Common\Elements\EnviarLoteRpsEnvio;
+use Ativasolucoestecnologicas\Nfse\Common\Elements\Abrasf\EnviarLoteRpsEnvio;
 use DOMNode;
 use stdClass;
 
