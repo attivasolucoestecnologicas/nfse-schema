@@ -23,7 +23,7 @@ class Endereco
         $dom->addChild($node, "Bairro", $std->bairro, true);
         $dom->addChild($node, "CodigoMunicipio", $std->codigomunicipio, true);
         $dom->addChild($node, "Uf", $std->uf, true);
-        if ($std->codigopais ?? null) {
+        if (isset($std->codigopais) && $std->codigopais) {
             $dom->addChild($node, "CodigoPais", $std->codigopais, true);
         }
         $dom->addChild($node, "Cep", $std->cep, true);

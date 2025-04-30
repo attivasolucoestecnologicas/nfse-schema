@@ -24,8 +24,9 @@ class Nfse extends Base
     private function mount()
     {
 
+        $this->nfse = $this->dom->createElement('Nfse');
 //        Cabecalho::mount($this->std->cabecalho, $this->dom);
-        CompNfse::mount($this->std->compnfse, $this->dom);
+        CompNfse::mount($this->std->compnfse, $this->dom, $this->nfse);
 //        $infRps = $this->dom->createElement('InfNfse');
 
 

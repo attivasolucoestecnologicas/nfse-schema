@@ -138,6 +138,9 @@ $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->IncentivoFiscal = 2; 
 $std->CompNfse->Nfse->InfNfse->DeclaracaoPrestacaoServico->Id = '001'; // OK
 
 header("Content-type: text/xml");
-Nfse::save($std, 'examples/xml/abrasf');
+$nfse = new Nfse($std);
+$xml = $nfse->save($std, 'examples/xml/abrasf', 'Teste-nfse');
+
+// Nfse::save($std, 'examples/xml/abrasf');
 //$nfse = Nfse::render($std);
 //echo $nfse;
